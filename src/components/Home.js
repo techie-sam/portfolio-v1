@@ -10,7 +10,7 @@ const StyledHeroSection = styled.section`
   }
 
   h1 {
-    margin: 0 0 30px 4px;
+    margin: 0 0 0px 4px;
     color: var(--green);
     font-family: var(--font-mono);
     font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
@@ -18,6 +18,9 @@ const StyledHeroSection = styled.section`
 
     @media (max-width: 480px) {
       margin: 0 0 20px 2px;
+    }
+    @media (min-width: 480px) {
+      margin: 90px 0 20px 2px;
     }
   }
 
@@ -37,15 +40,13 @@ const StyledHeroSection = styled.section`
 
 const Home = () => {
 
-    return (
-        <StyledHeroSection>
-            <CSSTransition classNames='fadeup' timeout={5}>
-                <h1 style={{ transitionDelay: 1000 }}>Hi, my name is</h1>
-            </CSSTransition>
-            <h2 className="big-heading">Samuel Abolade.</h2>
-            <h3 className="big-heading">I build things for the web.</h3>
-        </StyledHeroSection>
-    )
+  return (
+    <header className='col-8 m-auto text-center'>
+      <h4>Hi, my name is</h4>
+      <h1 className="mt-2">Samuel Abolade.</h1>
+      <h6 className="text-secondary">Front-end Developer</h6>
+    </header>
+  )
 }
 
 export default Home
