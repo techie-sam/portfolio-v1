@@ -75,6 +75,7 @@ header{
   padding-top: 5rem;
   overflow: hidden;
 }
+
 .name_span{
   @media (max-width: 480px) {
     display:block
