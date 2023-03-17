@@ -2,7 +2,7 @@ import logo from './logo.png';
 import "./App.css"
 import React from 'react'
 import Nav from './components/Nav';
-import Home from './components/Home';
+import Home from './components/Header';
 
 const App = () => {
   return (
