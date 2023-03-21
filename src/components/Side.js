@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 const StyledSideElement = styled.div`
   width: 40px;
   position: fixed;
@@ -22,10 +24,19 @@ const StyledSideElement = styled.div`
 
 const Side = () => {
   return (
-    <div>
-        
-    </div>
+    <StyledSideElement orientation={orientation}>
+        <TransitionGroup component={null}>
+          {/* {isMounted && ( */}
+            <CSSTransition classNames={isHome ? 'fade' : ''} timeout={isHome ? loaderDelay : 0}>
+              {/* {children} */}
+            </CSSTransition>
+        </TransitionGroup>
+    </StyledSideElement>
   )
-}
-
+};
+Side.propTypes = {
+  children: PropTypes.node.isRequired,
+  isHome: PropTypes.bool,
+  orientation: PropTypes.string,
+};
 export default Side

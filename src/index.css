@@ -76,11 +76,8 @@ header{
   overflow: hidden;
 }
 
-/* .name_span{
-  @media (max-width: 480px) {
-    display:block
-  }
-} */
+
+/* Transition Styles */
 .fadeup-enter {
   opacity: 0.01;
   transform: translateY(20px);
@@ -124,7 +121,6 @@ header{
   opacity: 0;
   transition: opacity 300ms;
 }
-
 
 
 
