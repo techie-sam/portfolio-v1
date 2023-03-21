@@ -1,97 +1,45 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { Transition } from 'react-transition-group';
-import { Key } from '@mui/icons-material';
+import { CSSTransition, Transition, TransitionGroup } from 'react-transition-group';
+import StyledHeader from './StyledHeader';
+import CTA from './CTA';
 
-const one = <h5>Hi, my name is</h5>
-const two = <h1 style={{ transitionDelay: `${11}00ms` }}>Samuel</h1>
-const three = <h6>Front-end Developer</h6>
-const items = [one, two, three]
+const items = [
+  <h5 key="1">Hi, my name is</h5>,
+  <h1 key="2" style={{ transitionDelay: `${11}00ms` }}>Samuel</h1>,
+  <h6 key="3">Front-end Developer</h6>
+];
 
-
-const StyledHeader = styled.header`
-  h1{
-    font-size: 3rem;
-    color: var(--light-slate);
-    font-weight: 700;
-  }
-  h6{
-    color: var(--slate);
-    font-weight:550
-  }
-  .custom_btn{
-    width: max-content;
-    display: inline-block;
-    color: var(--color-primary);
-    padding: 0.75rem 1.2rem;
-    cursor: pointer;
-    border-radius: 0.4rem;
-    border: 1px solid var(--color-primary);
-    transition: var(--transition);
-  }
-  .btn:hover{
-    background-color: var(--light-slate);
-    color: var(--color-bg);
-    border-color: transparent;
-  }
-  .btn-primary{
-    background: var(--color-primary);
-    color: var(--color-bg);
-  }
-  .cta_div{
-      margin-top: 2.5rem;
-      display: flex;
-      gap: 1.2rem;
-  }
-`;
-const transitionStyles = {
-  entering: { opacity: 100 },
-  entered: { opacity: 1 },
-  exiting: { opacity: 0 },
-  exited: { opacity: 0 },
-};
-
-
-const defaultStyle = {
-  // transition: `opacity 1000ms ease-in-out`,
-  // opacity: 0,
-  transform: `translateY(20px)`,
-  transition: `opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1)`
-}
 
 const Home = () => {
+  const [inProp, setInProp] = useState(false);
   const [isMounted, setIsMounted] = useState(false)
-  const [inProp, setInProp] = useState(false)
 
   useEffect(() => {
-    const timeout = setTimeout(() => setIsMounted(true), 1000);
-    if (isMounted) {
-      setInProp(true)
-    }
+    const timeout = setTimeout(() => setInProp(true), 1000);
     return () => clearTimeout(timeout);
-  });
+  }, []);
 
   return (
-    <StyledHeader>
-      <Transition in={inProp} timeout={500}>
-        {state => (
-          <div style={{
-            ...defaultStyle,
-            ...transitionStyles[state]
-
-          }}>
-            {
-              items.map((item, i) =>
-              <div key={i}>
+    // <StyledHeader>
+    <>
+      <TransitionGroup>
+        <div className='col-10 col-lg-8'>
+        {
+          inProp && items.map((item, i) =>
+            <CSSTransition in={inProp} timeout={2000} classNames="fadeup">
+              <div className="fadeup-component col" style={{ transitionDelay: `${i + 1}00ms` }} >
                 {item}
               </div>
+            </CSSTransition>
           )
-          }
-          </div>
-        )}
-      </Transition>
-    </StyledHeader>
-  )
-}
+        }
+        <CTA /> 
+        </div>
+      </TransitionGroup>
+    </>
 
-export default Home
+  )
+};
+
+export default Home;
