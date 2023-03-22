@@ -4,7 +4,7 @@ const StyledCard = styled.div`
         background: var(--color-bg-variant);
         border: 1px solid transparent;
         border-radius: 1rem;
-        padding: 2rem;
+        padding: 1.5rem;
         text-align: center;
         transform: var(--transition);
     }
