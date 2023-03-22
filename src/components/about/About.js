@@ -24,14 +24,12 @@ function About() {
   const [inProp, setInProp] = useState(false)
   const nodeRef = useRef(null);
   return (
-    <StyledAbout>
+    <>
+      <div className='text-center'>
+        <h6>Get To Know</h6>
+        <h5>About Me</h5>
+      </div>
       <section className='container col-10 m-auto d-md-flex gap-5 justify-content-between'>
-
-        {/* <div className="col-8 col-md-4">
-          <div className="my-image-div">
-            <img src={pic} alt="About Imae" className='w-100 m-auto' />
-          </div>
-        </div > */}
         <StyledPic>
           <div className="wrapper rounded-circle">
             <img
@@ -42,7 +40,7 @@ function About() {
           </div>
         </StyledPic>
 
-        <div >
+        <div className='col-md-6'>
           <div >
             <articule data-aos="zoom-in">
               <h5>Experience</h5>
@@ -54,13 +52,15 @@ function About() {
             </articule>
           </div>
 
-          <p>Hello! My name is Samuel and I enjoy creating things that live on the internet </p>
+          <p className='col-12 text-'>Hello and welcome to my portfolio! My name is Samuel, and I am a Front-end developer with 2 years of experience in React JS. I am passionate about building things that lives on the internet, and I have a proven track record of success.
+
+            My skills and expertise include [Your Skills and Expertise], and I am proficient in [Your Tools and Technologies]. I am always learning and staying up-to-date with the latest trends and developments in my field to ensure that I am providing the best possible solutions to my clients.</p>
 
           <a href="#contact" className="btn btn-primary">Let's Talk</a>
         </div>
       </section>
 
-    </StyledAbout>
+    </>
   );
 }
 export default About
