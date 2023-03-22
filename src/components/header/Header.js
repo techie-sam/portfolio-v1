@@ -32,7 +32,7 @@ const Home = () => {
               </CSSTransition>
             )
           }
-          <CTA /> 
+          <CTA />
         </header>
       </TransitionGroup>
     </ StyledHeader>

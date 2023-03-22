@@ -7,11 +7,11 @@ import About from './components/about/About';
 
 const App = () => {
   return (
-    <div className='col-8'>
+    <>
       <Nav/>
       <Header/>
       <About/>
-    </div>
+    </>
   )
 }
 
