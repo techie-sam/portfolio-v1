@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import StyledHeader from './StyledHeader';
 import CTA from './CTA';
@@ -16,26 +15,27 @@ const Home = () => {
 
   useEffect(() => {
     const timeout = setTimeout(() => setInProp(true), 1000);
+
     return () => clearTimeout(timeout);
   }, []);
 
   return (
-    <StyledHeader>
-      <TransitionGroup>
-        <header className='col-10 col-sm-10 m-auto'>
-          {
-            inProp && items.map((item, i) =>
+    <section>
+      <StyledHeader>
+        <TransitionGroup>
+          <header className='m-auto'>
+            {inProp && items.map((item, i) =>
               <CSSTransition key={i} in={inProp} timeout={2000} classNames="fadeup">
                 <div className="fadeup-component" style={{ transitionDelay: `${i + 1}00ms` }} >
                   {item}
                 </div>
               </CSSTransition>
-            )
-          }
-          <CTA />
-        </header>
-      </TransitionGroup>
-    </ StyledHeader>
+            )}
+            <CTA />
+          </header>
+        </TransitionGroup>
+      </ StyledHeader>
+    </section>
 
   )
 };

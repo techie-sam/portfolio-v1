@@ -19,15 +19,6 @@ const StyledHeader = styled.header`
     border: 1px solid var(--color-primary);
     transition: var(--transition);
   }
-  .btn:hover{
-    background-color: var(--light-slate);
-    color: var(--color-bg);
-    border-color: transparent;
-  }
-  .btn-primary{
-    background: var(--color-primary);
-    color: var(--color-bg);
-  }
   .cta_div{
       margin-top: 2.5rem;
       display: flex;

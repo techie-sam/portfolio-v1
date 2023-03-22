@@ -49,3 +49,12 @@ nav a.active{
   background: var(--color-primary);
   color: var(--color-bg);
 }
+.btn:hover{
+  background-color: var(--light-slate);
+  color: var(--color-bg);
+  border-color: transparent;
+}
+.btnPrimary{
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
