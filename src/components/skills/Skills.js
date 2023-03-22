@@ -4,12 +4,18 @@ import VerifiedIcon from '@mui/icons-material/Verified';
 import { CircularProgressbar, CircularProgressbarWithChildren, buildStyles } from "react-circular-progressbar";
 import 'react-circular-progressbar/dist/styles.css';
 import EachSkill from './EachSkill';
-const skills = [
-    { skill: "HTML", percentage: "90" },
-    { skill: "CSS", percentage: "75" },
-    { skill: "Javascript", percentage: "80" }
+import { margin } from '@mui/system';
+const LANGUAGES = [
+    { language: "HTML", percentage: "90" },
+    { language: "CSS", percentage: "75" },
+    { language: "Javascript", percentage: "80" },
 ]
-
+const TECHNOLOGIES = [
+    { technology: "Bootstrap", percentage: "90" },
+    { technology: "React", percentage: "75" },
+    { technology: "Tailwind", percentage: "80" },
+    { technology: "MUI", percentage: "80" },
+]
 const Skills = () => {
     return (
 
@@ -21,23 +27,39 @@ const Skills = () => {
             <StyledCard>
                 <div className='row gap-3' >
                     <span className='col' >
-                        <h3>Language</h3>
-                        <div className="">
+                        <h4>Language</h4>
+                        <div>
                             <div className='row' >
                                 {
-                                    skills.map(({ skill, percentage }) =>
-                                        <div style={{ width: "10px" }} className="col mt-3 border">
-                                            <div className='border' style={{ width: "70px" }}>
+                                    LANGUAGES.map(({ language, percentage }) =>
+                                        <div style={{ width: "10px" }} className="col mt-3">
 
-                                                <CircularProgressbar className='border m-auto col row' style={{ width: "70px" }} value={percentage} text={`${percentage}%`} />
-                                            </div>
-                                            <h4 className='mt-3 fs-6 '> {skill}</h4>
+                                                <CircularProgressbar styles={{
+                                                    root: { width: "70px", margin:"50px" },
+                                                    path: { stroke: "var(--color-primary)" },
+                                                    trail: { stroke: "#d6d6d6" },
+                                                    text: { fill: "var(--light-slate)", fontSize: "24px" },
+                                                }} 
+                                                className='m-auto col row' 
+                                                style={{ width: "x" }} value={percentage} text={`${percentage}%`} />
+                                            <h4 className='mt-3 fs-6 '> {language}</h4>
                                         </div>
                                     )
                                 }
                             </div>
+                        </div>
+                    </span>
 
-
+                    <span className='col' >
+                        <h4>Technologies</h4>
+                        <div>
+                            <div className='row' >
+                                {
+                                    TECHNOLOGIES.map(({technology, percentage}) =>
+                                        <small></small>
+                                    )
+                                }
+                            </div>
                         </div>
                     </span>
                     <span className='col' >
