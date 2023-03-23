@@ -6,12 +6,12 @@ import StyledCard from './StyledCard';
 
 function About() {
   return (
-    <section>
+    <section id='about'>
       <div className='text-center mb-3'>
         <h6>Get To Know</h6>
         <h5>About Me</h5>
       </div>
-    
+
       <div className='container m-auto d-md-flex gap-5 justify-content-between'>
         <StyledPic>
           <div className="wrapper rounded-circle">

@@ -15,12 +15,12 @@ const TECHNOLOGIES = [
     "React",
     "Material UI",
     "Redux",
-    "Responsive web-design",
+    "Next JS",
 ]
 const Skills = () => {
     return (
 
-        <section className=''>
+        <section id="skills">
             <div className='text-center mt-5'>
                 <h6>Get to know</h6>
                 <h5>About my Skills</h5>
@@ -33,7 +33,7 @@ const Skills = () => {
                             <div className='row' >
                                 {
                                     LANGUAGES.map(({ language, percentage }) =>
-                                        <div className="col mt-3" key={language}>
+                                        <div className="col mt-4" key={language}>
                                             <CircularProgressbar styles={{
                                                 root: { width: "60px", },
                                                 path: { stroke: "var(--color-primary)" },
@@ -54,7 +54,7 @@ const Skills = () => {
                     <span className='col' >
                         <h4>Technologies</h4>
                         <div>
-                            <div className='row m-auto border'>
+                            <div className='row m-auto'>
                                 {
                                     TECHNOLOGIES.map(technology =>
                                         <small key={technology} className='col-5 mt-4 m-auto text-start'><VerifiedIcon /> {technology}</small>
