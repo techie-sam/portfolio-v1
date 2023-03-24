@@ -26,7 +26,7 @@ const Skills = () => {
                 <h5>About my Skills</h5>
             </div>
             <StyledCard>
-                <div className='row gap-5 container m-auto mt-5' >
+                <div className='row gap-5  mt-5' >
                     <span className='col' >
                         <h4>Language</h4>
                         <div>
