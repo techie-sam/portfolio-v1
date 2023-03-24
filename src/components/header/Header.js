@@ -20,7 +20,7 @@ const Home = () => {
   }, []);
 
   return (
-    <section>
+    <section id='home'>
       <StyledHeader>
         <TransitionGroup>
           <header className='m-auto'>

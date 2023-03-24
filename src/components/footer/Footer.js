@@ -16,9 +16,9 @@ const Footer = (props) => {
     //     {icon: Twitter, link}
     // ]
     return (
-        <StyledFooter style={{ backgroundColor: 'var(--color-primary)', color: 'var(--light-slate)', paddingBottom:"20vh" }} className="text-light">
+        <StyledFooter style={{ backgroundColor: 'var(--color-primary)', color: 'var(--light-slate)', paddingBottom:"30vh" }} className="text-light mt-5">
             <div className='text-center p-3'>
-                <a href="#" className="fs-3 fw-bold text-decoration-none">Samuel Abolade</a>
+                <a href="#home" className="fs-3 fw-bold text-decoration-none">Samuel Abolade</a>
             </div>
 
             <ul className="row gap-3 gap-lg-0 col-9 m-auto p-4">
@@ -28,7 +28,7 @@ const Footer = (props) => {
                     )
                 }
             </ul>
-            <div className='social_link text-center'>
+            <div className='text-center'>
                 <a href="#" target="_blank"><Twitter /></a>
                 <a href="#" target="_blank"><LinkedIn /></a>
                 <a href="#" target="_blank"><GitHub /></a>

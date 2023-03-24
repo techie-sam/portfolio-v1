@@ -1,13 +1,13 @@
 import React from 'react'
 import StyledCard from '../about/StyledCard'
 import TextField from '@mui/material/TextField';
-import {  } from '../constants';
+import { linkedinAddress, emailAddress, whatsappLink } from '../constants';
 
 const Contact = () => {
     const CONTACT_DETAILS = [
-        { platform: "Email", address: "blessingabolade15@gmail.com", link: "https//b;essingabolade15@gmail.com", icon: '' },
-        { platform: "LinkedIn", address: "LinkedIn", icon: '' },
-        { platform: "WhatsApp", address: "Send a message",},
+        { platform: "Email", address: "blessingabolade15@gmail.com", link: emailAddress, icon: '' },
+        { platform: "LinkedIn", address: "LinkedIn", link: linkedinAddress, icon: '' },
+        { platform: "WhatsApp", address: "Send a message", link: whatsappLink, icon: ''},
     ]
     const TEXT_FIELD_PROPS = [
         { id: "fullname", label: "Full Name", defaultValue: ""},
@@ -20,12 +20,12 @@ const Contact = () => {
                 <h6>Get in Touch</h6>
                 <h5>Contact Me</h5>
             </div>
-            <StyledCard className='row gap-5'>
+            <StyledCard className='row gap-5 m-auto'>
                 <div className='row gap-3 col-lg-4 col-12 m-auto'>
                     {
                         CONTACT_DETAILS.map(({ platform, address, link, icon }, i) =>
                             <span key={platform}>
-                                <a href={link} className="text-decoration-none">
+                                <a href={link} target='_blank' className="text-decoration-none" rel="noreferrer">
                                     <h6>{platform}</h6>
                                     <small className='text-light d-block mb-3'>{address}</small>
                                     <small>Send Message</small>

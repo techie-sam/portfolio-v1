@@ -1,8 +1,7 @@
-const contactInfo = {
-    github: 'https://github.com/techie-sam',
-    linkedin: 'https://linkedin.com/in/techie-sam',
-    twitter: 'https://linkedin.com/techie_sam',
-    whatsapp: "wa.mr"
-}
+const linkedinAddress = 'https://linkedin.com/in/techie-sam'
+const twitterAddress = 'https://linkedin.com/techie_sam'
+const githubAddress = 'https://github.com/techie-sam'
+const whatsappLink = 'https://'
+const emailAddress = 'https://emailAddreess'
 
-export { contactInfo }
+export { linkedinAddress, twitterAddress, githubAddress, whatsappLink, emailAddress }
