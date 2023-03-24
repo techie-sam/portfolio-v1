@@ -7,11 +7,11 @@ const Contact = () => {
     const CONTACT_DETAILS = [
         { platform: "Email", address: "blessingabolade15@gmail.com", link: emailAddress, icon: '' },
         { platform: "LinkedIn", address: "LinkedIn", link: linkedinAddress, icon: '' },
-        { platform: "WhatsApp", address: "Send a message", link: whatsappLink, icon: ''},
+        { platform: "WhatsApp", address: "Send a message", link: whatsappLink, icon: '' },
     ]
     const TEXT_FIELD_PROPS = [
-        { id: "fullname", label: "Full Name", defaultValue: ""},
-        { id: "email", label: "Email", defaultValue: ""},
+        { id: "fullname", label: "Full Name", defaultValue: "" },
+        { id: "email", label: "Email", defaultValue: "" },
         { id: "message", label: "Message", defaultValue: "", rows: "4", multiline: true },
     ]
     return (
