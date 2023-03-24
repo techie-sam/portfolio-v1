@@ -1,6 +1,7 @@
 import React from 'react'
 import StyledCard from '../about/StyledCard'
 import TextField from '@mui/material/TextField';
+import {  } from '../constants';
 
 const Contact = () => {
     const CONTACT_DETAILS = [
