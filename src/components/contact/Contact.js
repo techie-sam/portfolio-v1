@@ -5,8 +5,8 @@ import TextField from '@mui/material/TextField';
 const Contact = () => {
     const CONTACT_DETAILS = [
         { platform: "Email", address: "blessingabolade15@gmail.com", link: "https//b;essingabolade15@gmail.com", icon: '' },
+        { platform: "LinkedIn", address: "LinkedIn", icon: '' },
         { platform: "WhatsApp", address: "Send a message",},
-        { platform: "Email", address: "blessingabolade15@gmail.com", icon: '' },
     ]
     const TEXT_FIELD_PROPS = [
         { id: "fullname", label: "Full Name", defaultValue: ""},
@@ -37,6 +37,7 @@ const Contact = () => {
                     {
                         TEXT_FIELD_PROPS.map(({ id, label, defaultValue, rows, multiline }) =>
                             <TextField
+                                key={id}
                                 className='d-block mt-4'
                                 fullWidth
                                 id={id}
