@@ -11,7 +11,7 @@ const StyledPic = styled.div`
   .wrapper {
     position: relative;
     width: 100%;
-    background: linear-gradient(45deg, transparent, var(--color-primary), transparent);;
+    background: linear-gradient(45deg,  var(--color-primary), var(--color-primary),  var(--color-primary));;
 
     &:hover,
     &:focus {

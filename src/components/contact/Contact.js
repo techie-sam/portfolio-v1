@@ -2,6 +2,7 @@ import React from 'react'
 import StyledCard from '../about/StyledCard'
 import TextField from '@mui/material/TextField';
 import { linkedinAddress, emailAddress, whatsappLink } from '../constants';
+import Fade from 'react-reveal/Fade';
 
 const Contact = () => {
     const CONTACT_DETAILS = [
@@ -21,16 +22,19 @@ const Contact = () => {
                 <h5>Contact Me</h5>
             </div>
             <StyledCard className='row gap-5 m-auto'>
+
                 <div className='row gap-3 col-lg-4 col-12 m-auto'>
                     {
                         CONTACT_DETAILS.map(({ platform, address, link, icon }, i) =>
-                            <span key={platform}>
-                                <a href={link} target='_blank' className="text-decoration-none" rel="noreferrer">
-                                    <h6>{platform}</h6>
-                                    <small className='text-light d-block mb-3'>{address}</small>
-                                    <small>Send Message</small>
-                                </a>
-                            </span>
+                            <Fade key={platform}>
+                                <span>
+                                    <a href={link} target='_blank' className="text-decoration-none" rel="noreferrer">
+                                        <h6>{platform}</h6>
+                                        <small className='text-light d-block mb-3'>{address}</small>
+                                        <small>Send Message</small>
+                                    </a>
+                                </span>
+                            </Fade>
                         )
                     }
                 </div>

@@ -22,7 +22,7 @@ const Footer = (props) => {
             <ul className="row gap-3 gap-lg-0 col-9 m-auto p-4">
                 {
                     PREMALINKS.map(({ link, text }) =>
-                        <li className='col-12 col-lg fs-6 text-center'><a href={link} className='text-decoration-none'>{text}</a></li>
+                        <li key={text} className='col-12 col-lg fs-6 text-center'><a href={link} className='text-decoration-none'>{text}</a></li>
                     )
                 }
             </ul>

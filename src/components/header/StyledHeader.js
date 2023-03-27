@@ -24,6 +24,18 @@ const StyledHeader = styled.header`
       display: flex;
       gap: 1.2rem;
   }
+  .animation {
+    opacity: 0;
+    transform: translateX(-300px);
+    transition: all 0.7s ease-out;
+    transition-delay: 0.4s;
+
+}
+
+.scroll-animation {
+    opacity: 1;
+    transform: translateX(0);
+}
 `;
 
 export default StyledHeader

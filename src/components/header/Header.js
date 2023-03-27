@@ -10,6 +10,7 @@ const items = [
 ];
 
 
+
 const Home = () => {
   const [inProp, setInProp] = useState(false);
   const [CTAdisplay, setCTAdisplay  ] = useState(false);
@@ -21,7 +22,9 @@ const Home = () => {
   }, []);
 
   return (
+
     <section id='home'>
+
       <StyledHeader>
         <TransitionGroup>
           <header className='m-auto'>

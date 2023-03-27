@@ -3,6 +3,7 @@ import StyledCard from '../about/StyledCard'
 import VerifiedIcon from '@mui/icons-material/Verified';
 import { CircularProgressbar } from "react-circular-progressbar";
 import 'react-circular-progressbar/dist/styles.css';
+import Fade from 'react-reveal/Fade';
 
 const LANGUAGES = [
     { language: "HTML", percentage: "90" },
@@ -27,42 +28,46 @@ const Skills = () => {
             </div>
             <StyledCard>
                 <div className='row gap-5  mt-5' >
-                    <span className='col' >
-                        <h4>Language</h4>
-                        <div>
-                            <div className='d-flex mt-4  border-danger justify-content-between' >
-                                { 
-                                    LANGUAGES.map(({ language, percentage }) =>
-                                        <div className="col " key={language}>
-                                            <CircularProgressbar styles={{
-                                                root: { width: "60px", },
-                                                path: { stroke: "var(--color-primary)" },
-                                                trail: { stroke: "#d6d6d6" },
-                                                text: { fill: "var(--light-slate)", fontSize: "24px" },
-                                            }}
-                                                className='m-auto col row'
-                                                value={percentage}
-                                                text={`${percentage}%`} />
-                                            <h4 className='mt-3 fs-6 '> {language}</h4>
-                                        </div>
-                                    )
-                                }
+                    <Fade bottom>
+                        <span className='col' >
+                            <h4>Language</h4>
+                            <div>
+                                <div className='d-flex mt-4  border-danger justify-content-between' >
+                                    {
+                                        LANGUAGES.map(({ language, percentage }) =>
+                                            <div className="col " key={language}>
+                                                <CircularProgressbar styles={{
+                                                    root: { width: "60px", },
+                                                    path: { stroke: "var(--color-primary)" },
+                                                    trail: { stroke: "#d6d6d6" },
+                                                    text: { fill: "var(--light-slate)", fontSize: "24px" },
+                                                }}
+                                                    className='m-auto col row'
+                                                    value={percentage}
+                                                    text={`${percentage}%`} />
+                                                <h4 className='mt-3 fs-6 '> {language}</h4>
+                                            </div>
+                                        )
+                                    }
+                                </div>
                             </div>
-                        </div>
-                    </span>
+                        </span>
+                    </Fade>
 
-                    <span className='col' >
-                        <h4>Technologies</h4>
-                        <div>
-                            <div className='row m-auto'>
-                                {
-                                    TECHNOLOGIES.map(technology =>
-                                        <small key={technology} className='col-5 mt-4 m-auto text-start'><VerifiedIcon /> {technology}</small>
-                                    )
-                                }
+                    <Fade bottom>
+                        <span className='col' >
+                            <h4>Technologies</h4>
+                            <div>
+                                <div className='row m-auto'>
+                                    {
+                                        TECHNOLOGIES.map(technology =>
+                                            <small key={technology} className='col-5 mt-4 m-auto text-start'><VerifiedIcon /> {technology}</small>
+                                        )
+                                    }
+                                </div>
                             </div>
-                        </div>
-                    </span>
+                        </span>
+                    </Fade>
                 </div>
             </StyledCard >
 

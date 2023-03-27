@@ -2,6 +2,7 @@ import React from 'react'
 import StyledCard from '../about/StyledCard'
 import quizlet from '../../assets/quizlet.png'
 import portfolio from '../../assets/portfolio.PNG'
+import { Fade } from 'react-reveal'
 
 const Projects = () => {
     const PROJECTS = [
@@ -17,9 +18,11 @@ const Projects = () => {
                 <h5>Projects</h5>
             </div>
             <StyledCard>
+
                 <div className='row gap-3'>
                     {
                         PROJECTS.map(({ name, liveDemo, gitHub, image }, index) =>
+                        <Fade bottom key={name}>
                             <span className='col-lg col-12' key={name}>
                                 <div>
                                     <img src={image} className="w-100" alt={name} />
@@ -28,6 +31,7 @@ const Projects = () => {
                                 <a href={liveDemo} target="_blank" rel="noreferrer" className="btn btnPrimary m-1">Live Demo</a>
                                 <a href={gitHub} target="_blank" rel="noreferrer" className="btn btnPrimary m-1">Github</a>
                             </span>
+                        </Fade>
                         )
                     }
                 </div>
