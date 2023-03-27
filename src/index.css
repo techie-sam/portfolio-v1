@@ -56,7 +56,7 @@ html{
   scroll-behavior: smooth;
 }
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 5px;
 }
 ::-webkit-scrollbar-track {
   background: var(--color-bg);

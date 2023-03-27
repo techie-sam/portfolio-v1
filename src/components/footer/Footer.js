@@ -1,10 +1,10 @@
 import React from 'react'
 import StyledFooter from './StyledFooter'
 import { Twitter, LinkedIn, GitHub } from '@mui/icons-material'
+import { githubAddress, linkedinAddress, twitterAddress } from '../constants'
 
 
-const Footer = (props) => {
-    console.log(props.contactInfo)
+const Footer = () => {
     const PREMALINKS = [
         { link: '#', text: 'Home' },
         { link: '#about', text: 'About' },
@@ -27,9 +27,9 @@ const Footer = (props) => {
                 }
             </ul>
             <div className='text-center'>
-                <a href="#" target="_blank"><Twitter /></a>
-                <a href="#" target="_blank"><LinkedIn /></a>
-                <a href="#" target="_blank"><GitHub /></a>
+                <a href={twitterAddress} rel="noreferrer" target="_blank"><Twitter /></a>
+                <a href={linkedinAddress} rel="noreferrer" target="_blank"><LinkedIn /></a>
+                <a href={githubAddress} rel="noreferrer" target="_blank"><GitHub /></a>
             </div>
             <div className="text-center mt-4">
                 <small>
