@@ -12,9 +12,7 @@ const Footer = (props) => {
         { link: '#projects', text: 'Projects' },
         { link: '#contact', text: 'Conatct' },
     ]
-    // const SOCIAL_LINKS =[
-    //     {icon: Twitter, link}
-    // ]
+
     return (
         <StyledFooter style={{ backgroundColor: 'var(--color-primary)', color: 'var(--light-slate)', paddingBottom:"30vh" }} className="text-light mt-5">
             <div className='text-center p-3'>

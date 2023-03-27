@@ -12,10 +12,11 @@ const items = [
 
 const Home = () => {
   const [inProp, setInProp] = useState(false);
+  const [CTAdisplay, setCTAdisplay  ] = useState(false);
 
   useEffect(() => {
     const timeout = setTimeout(() => setInProp(true), 1000);
-
+    setTimeout(() => setCTAdisplay(true), 2000);
     return () => clearTimeout(timeout);
   }, []);
 
@@ -31,7 +32,9 @@ const Home = () => {
                 </div>
               </CSSTransition>
             )}
-            <CTA />
+            {
+              CTAdisplay && <CTA />
+            }
           </header>
         </TransitionGroup>
       </ StyledHeader>

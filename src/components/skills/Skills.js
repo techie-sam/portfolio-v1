@@ -20,7 +20,7 @@ const TECHNOLOGIES = [
 const Skills = () => {
     return (
 
-        <section id="skills">
+        <section id="skills" className='borer'>
             <div className='text-center mt-5'>
                 <h6>Get to know</h6>
                 <h5>About my Skills</h5>
@@ -30,10 +30,10 @@ const Skills = () => {
                     <span className='col' >
                         <h4>Language</h4>
                         <div>
-                            <div className='row' >
-                                {
+                            <div className='d-flex mt-4  border-danger justify-content-between' >
+                                { 
                                     LANGUAGES.map(({ language, percentage }) =>
-                                        <div className="col mt-4" key={language}>
+                                        <div className="col " key={language}>
                                             <CircularProgressbar styles={{
                                                 root: { width: "60px", },
                                                 path: { stroke: "var(--color-primary)" },

@@ -50,7 +50,7 @@ const Contact = () => {
                             />
                         )
                     }
-                    <button className='btn btnPrimary mt-3'>SEND MESSAGE</button>
+                    <button className='btn btn-primary btnPrimary mt-3'>SEND MESSAGE</button>
                 </div>
             </StyledCard>
         </section>
