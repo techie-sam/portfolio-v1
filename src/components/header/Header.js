@@ -24,7 +24,6 @@ const Home = () => {
   return (
 
     <section id='home'>
-
       <StyledHeader>
         <TransitionGroup>
           <header className='m-auto'>

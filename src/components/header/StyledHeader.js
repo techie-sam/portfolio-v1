@@ -4,7 +4,18 @@ const StyledHeader = styled.header`
     font-size: 3rem;
     color: var(--light-slate);
     font-weight: 700;
+  } 
+  h5{
+    color: var(--color-primary)
   }
+  @media screen and (max-width: 500px){
+    h1{
+      font-size:2.5em;
+    }
+    h5{
+      font-size:1em
+    }
+  }  
   h6{
     color: var(--slate);
     font-weight:550
