@@ -21,22 +21,22 @@ const Projects = () => {
             </div>
             <StyledCard>
 
-                <div className='row gap-3'>
+                <ul className='row gap-3'>
                     {
                         PROJECTS.map(({ name, liveDemo, gitHub, image }) =>
                             <Fade bottom key={name}>
-                                <span className='col-lg col-12' key={name}>
-                                    <div>
-                                        <img src={image} className="w-100" alt={name} />
-                                        <h4 className='p-3'>{name}</h4>
-                                    </div>
-                                    <a href={liveDemo} target="_blank" rel="noreferrer" className="btn btnPrimary m-1">Live Demo</a>
-                                    <a href={gitHub} target="_blank" rel="noreferrer" className="btn btnPrimary m-1">Github</a>
-                                </span>
+                                    <li className='col-lg col-12' key={name}>
+                                        <div>
+                                            <img src={image} className="w-100" alt={name} />
+                                            <h4 className='p-3'>{name}</h4>
+                                        </div>
+                                        <a href={liveDemo} target="_blank" rel="noreferrer" className="btn btnPrimary m-1">Live Demo</a>
+                                        <a href={gitHub} target="_blank" rel="noreferrer" className="btn btnPrimary m-1">Github</a>
+                                    </li>
                             </Fade>
                         )
                     }
-                </div>
+                </ul>
             </StyledCard>
         </section>
     )

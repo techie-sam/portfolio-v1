@@ -1,6 +1,6 @@
 import styled from "styled-components";
 const StyledCard = styled.div`
-    span{
+    li{
         background: var(--color-bg-variant);
         border: 1px solid transparent;
         border-radius: 1rem;
@@ -9,7 +9,7 @@ const StyledCard = styled.div`
         transform: var(--transition);
         min-width:250px;
     }
-    span:hover{
+    li:hover{
         background: transparent;
         border-color: var(--color-primary-variant);
         cursor: default;

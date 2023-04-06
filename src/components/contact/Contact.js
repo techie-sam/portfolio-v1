@@ -23,28 +23,32 @@ const Contact = () => {
             </div>
             <StyledCard className='row gap-5 m-auto'>
 
-                <div className='row gap-3 col-lg-4 col-12 m-auto'>
+                <ul className='row gap-3 col-lg-4 col-12 m-auto'>
                     {
                         CONTACT_DETAILS.map(({ platform, address, link, icon }, i) =>
                             <Fade key={platform}>
-                                <span>
-                                    <TextField label="Ayan"/>
-                                    <a href={link} target='_blank' className="text-decoration-none" rel="noreferrer">
-                                        <h6>{platform}</h6>
-                                        <small className='text-light d-block mb-3'>{address}</small>
-                                        <small>Send Message</small>
-                                    </a>
-                                </span>
+                                    <li>
+                                        <a href={link} target='_blank' className="text-decoration-none" rel="noreferrer">
+                                            <h6>{platform}</h6>
+                                            <small className='text-light d-block mb-3'>{address}</small>
+                                            <small>Send Message</small>
+                                        </a>
+                                    </li>
                             </Fade>
                         )
                     }
-                </div>
+                </ul>
                 <div className='col col-lg-6 rounded rounded-5'>
                     {
                         TEXT_FIELD_PROPS.map(({ id, label, defaultValue, rows }) =>
                             <TextField
                                 key={id}
-                                className='d-block mt-4 border'
+                                className='d-block mt-4'
+                                InputProps={{
+                                    style: {
+                                      color: '#ffff'
+                                    }
+                                  }}
                                 fullWidth
                                 id={id}
                                 label={label}

@@ -27,9 +27,9 @@ const Skills = () => {
                 <h5>About my Skills</h5>
             </div>
             <StyledCard>
-                <div className='row gap-5  mt-5' >
+                <ul className='row gap-5  mt-5' >
                     <Fade bottom>
-                        <span className='col' >
+                        <li className='col' >
                             <h4>Language</h4>
                             <div>
                                 <div className='d-flex mt-4  border-danger justify-content-between' >
@@ -51,11 +51,11 @@ const Skills = () => {
                                     }
                                 </div>
                             </div>
-                        </span>
+                        </li>
                     </Fade>
 
                     <Fade bottom>
-                        <span className='col' >
+                        <li className='col' >
                             <h4>Technologies</h4>
                             <div>
                                 <div style={{minWidth:'250px'}} className='row m-auto'>
@@ -66,9 +66,9 @@ const Skills = () => {
                                     }
                                 </div>
                             </div>
-                        </span>
+                        </li>
                     </Fade>
-                </div>
+                </ul>
             </StyledCard >
 
         </section >

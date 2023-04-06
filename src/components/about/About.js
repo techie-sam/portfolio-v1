@@ -27,20 +27,20 @@ function About() {
 
           <div className='col-md-6 mt-3'>
             <StyledCard>
-              <div className='row gap-3' >
-                <span className='col' data-aos="zoom-in">
+              <ul className='row gap-3' >
+                <li className='col' data-aos="zoom-in">
                   <h5>Experience</h5>
                   <small>{currentYear - 2022}+ years Working</small>
-                </span>
-                <span className='col' data-aos="zoom-in">
+                </li>
+                <li className='col' data-aos="zoom-in">
                   <h5>Projects</h5>
                   <small>10+ Completed</small>
-                </span>
-                <span className='col' data-aos="zoom-in">
+                </li>
+                <li className='col' data-aos="zoom-in">
                   <h5>Projects</h5>
                   <small>10+ Completed</small>
-                </span>
-              </div>
+                </li>
+              </ul>
             </StyledCard>
           </div>
         </div>
