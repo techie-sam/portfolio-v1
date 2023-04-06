@@ -17,15 +17,6 @@
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-*{
-  margin: 0;
-  padding: 0;
-  border: 1px solid red;
-  box-sizing: border-box;
-  outline: 0;
-  list-style: none;
-  text-decoration: none;
-}
 
 body{
   font-family: 'Poppins', sans-serif;
@@ -38,7 +29,6 @@ section{
   max-width: 90%;
   margin: auto;
   padding: 10px;
-  /* border: 1px solid; */
 }
 @media screen and (min-width: 500px){
   section{
@@ -87,7 +77,6 @@ h5{
 
 h2,h3,h4,h5{
   font-weight: 500;
-  
 }
 header{
   height: 100vh;

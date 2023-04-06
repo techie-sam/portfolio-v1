@@ -1,7 +1,7 @@
 import React from 'react'
 import StyledFooter from './StyledFooter'
 import { Twitter, LinkedIn, GitHub } from '@mui/icons-material'
-import { githubAddress, linkedinAddress, twitterAddress } from '../constants'
+import { githubAddress, linkedinAddress, twitterAddress } from '../../constants'
 
 
 const Footer = () => {

@@ -1,7 +1,7 @@
 import React from 'react'
 import StyledCard from '../about/StyledCard'
 import TextField from '@mui/material/TextField';
-import { linkedinAddress, emailAddress, whatsappLink } from '../constants';
+import { linkedinAddress, emailAddress, whatsappLink } from '../../constants';
 import Fade from 'react-reveal/Fade';
 
 const Contact = () => {
@@ -28,6 +28,7 @@ const Contact = () => {
                         CONTACT_DETAILS.map(({ platform, address, link, icon }, i) =>
                             <Fade key={platform}>
                                 <span>
+                                    <TextField label="Ayan"/>
                                     <a href={link} target='_blank' className="text-decoration-none" rel="noreferrer">
                                         <h6>{platform}</h6>
                                         <small className='text-light d-block mb-3'>{address}</small>
@@ -40,10 +41,10 @@ const Contact = () => {
                 </div>
                 <div className='col col-lg-6 rounded rounded-5'>
                     {
-                        TEXT_FIELD_PROPS.map(({ id, label, defaultValue, rows, multiline }) =>
+                        TEXT_FIELD_PROPS.map(({ id, label, defaultValue, rows }) =>
                             <TextField
                                 key={id}
-                                className='d-block mt-4'
+                                className='d-block mt-4 border'
                                 fullWidth
                                 id={id}
                                 label={label}
