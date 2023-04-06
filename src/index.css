@@ -34,7 +34,7 @@ body{
   line-height: 1.7rem;
 }
 section{
-  min-height: 90vh;
+  margin-top: 8rem;
   max-width: 90%;
   margin: auto;
   padding: 10px;
@@ -42,7 +42,11 @@ section{
 }
 @media screen and (min-width: 500px){
   section{
-    min-height: 80vh;
+    max-width: 75%;
+  }
+}  
+@media screen and (max-width: 500px){
+  section{
     max-width: 85%;
   }
 }  

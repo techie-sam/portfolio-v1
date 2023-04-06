@@ -7,6 +7,7 @@ const StyledCard = styled.div`
         padding: 1.5rem;
         text-align: center;
         transform: var(--transition);
+        min-width:250px;
     }
     span:hover{
         background: transparent;

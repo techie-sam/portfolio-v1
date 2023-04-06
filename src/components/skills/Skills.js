@@ -58,7 +58,7 @@ const Skills = () => {
                         <span className='col' >
                             <h4>Technologies</h4>
                             <div>
-                                <div className='row m-auto'>
+                                <div style={{minWidth:'250px'}} className='row m-auto'>
                                     {
                                         TECHNOLOGIES.map(technology =>
                                             <small key={technology} className='col-5 mt-4 m-auto text-start'><VerifiedIcon /> {technology}</small>

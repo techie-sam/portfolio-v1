@@ -8,7 +8,9 @@ const Projects = () => {
     const PROJECTS = [
         { name: "Quizlet quiz App", liveDemo: "https://quizlet001.netlify.app", image: quizlet, gitHub: "https://github.com/techie-sam/cbt_react_app" },
         { name: "React Portfolio", liveDemo: "https://quizlet001.netlify.app", image: portfolio, gitHub: "https://quizlet001.netlify.app" },
-        { name: "Weather App", liveDemo: "https://techie-sam.netlify.app", image: "", gitHub: "https://quizlet001.netlify.app" },
+        { name: "Weather App", liveDemo: "https://weathermate001.netlify.app", image: "", gitHub: "https://github.com/techie-sam/weather-app" },
+        { name: "React Portfolio", liveDemo: "https://techie-sam.netlify.app", image: "", gitHub: "https://quizlet001.netlify.app" },
+        { name: "React Portfolio", liveDemo: "https://techie-sam.netlify.app", image: "", gitHub: "https://quizlet001.netlify.app" },
         { name: "React Portfolio", liveDemo: "https://techie-sam.netlify.app", image: "", gitHub: "https://quizlet001.netlify.app" },
     ]
     return (

@@ -14,7 +14,7 @@ const Footer = () => {
     ]
 
     return (
-        <StyledFooter style={{ backgroundColor: 'var(--color-primary)', color: 'var(--light-slate)', paddingBottom:"30vh" }} className="text-light mt-5">
+        <StyledFooter style={{ backgroundColor: 'var(--color-primary)', color: 'var(--light-slate)', paddingBottom:"10rem" }} className="text-light mt-5">
             <div className='text-center p-3'>
                 <a href="#home" className="fs-3 fw-bold text-decoration-none">Samuel Abolade</a>
             </div>

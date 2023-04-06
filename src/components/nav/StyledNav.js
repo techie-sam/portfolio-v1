@@ -14,28 +14,24 @@ nav {
     gap: 0.8rem;
     border-radius: 3rem;
     backdrop-filter: blur(15px);
-  }
-  @media screen and (min-width: 500px){
-    nav{
-      max-width: 85%;
-    }
-  }  
-  nav a{
-      background: transparent;
-      padding: 0.5rem;
-      border-radius: 50%;
-      display: flex;
-      color: var(--color-light);
-      font-size: 1.1rem;
-  }
-  
-  nav a:hover{
-    background: rgba(0,0,0,0.3);
-  }
-  
-  nav a.active{
-    background: var(--color-primary);
-    color: var(--color-bg);
-  }
+}
+
+nav a{
+    background: transparent;
+    padding: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    color: var(--color-light);
+    font-size: 1.1rem;
+}
+
+nav a:hover{
+background: rgba(0,0,0,0.3);
+}
+
+nav a.active{
+background: var(--color-primary);
+color: var(--color-bg);
+}
 `;
 export default StyledNav
