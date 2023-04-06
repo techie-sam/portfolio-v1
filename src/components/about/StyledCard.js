@@ -11,8 +11,13 @@ li{
         padding: 1.5rem;
         text-align: center;
         transform: var(--transition);
-        min-width:250px;
+        min-width:15em;
     }
+    @media screen and (max-width: 300px){
+        li{
+            min-width:13em;
+        }
+    }  
     li:hover{
         background: transparent;
         border-color: var(--color-primary-variant);

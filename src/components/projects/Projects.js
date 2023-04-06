@@ -25,7 +25,7 @@ const Projects = () => {
                     {
                         PROJECTS.map(({ name, liveDemo, gitHub, image }) =>
                             <Fade bottom key={name}>
-                                    <li className='col-lg col-12' key={name}>
+                                    <li className='col-sm col-12' key={name}>
                                         <div>
                                             <img src={image} className="w-100" alt={name} />
                                             <h4 className='p-3'>{name}</h4>

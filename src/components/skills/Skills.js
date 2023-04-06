@@ -31,34 +31,32 @@ const Skills = () => {
                     <Fade bottom>
                         <li className='col' >
                             <h4>Language</h4>
-                            <div>
-                                <div className='d-flex mt-4  border-danger justify-content-between' >
-                                    {
-                                        LANGUAGES.map(({ language, percentage }) =>
-                                            <div className="col " key={language}>
-                                                <CircularProgressbar styles={{
-                                                    root: { width: "60px", },
-                                                    path: { stroke: "var(--color-primary)" },
-                                                    trail: { stroke: "#d6d6d6" },
-                                                    text: { fill: "var(--light-slate)", fontSize: "24px" },
-                                                }}
-                                                    className='m-auto col row'
-                                                    value={percentage}
-                                                    text={`${percentage}%`} />
-                                                <h4 className='mt-3 fs-6 '> {language}</h4>
-                                            </div>
-                                        )
-                                    }
-                                </div>
+                            <div style={{fontSize:'0.8em'}} className='d-flex mt-5 justify-content-evenly gap-4 m-auto' >
+                                {
+                                    LANGUAGES.map(({ language, percentage }) =>
+                                        <div className="col-3" key={language}>
+                                            <CircularProgressbar styles={{
+                                                root: { width: "70%", },
+                                                path: { stroke: "var(--color-primary)" },
+                                                trail: { stroke: "#d6d6d6" },
+                                                text: { fill: "var(--light-slate)", fontSize: "1.5em" },
+                                            }}
+                                                className='m-auto col row'
+                                                value={percentage}
+                                                text={`${percentage}%`} />
+                                            <p className='mt-2 col'> {language}</p>
+                                        </div>
+                                    )
+                                }
                             </div>
                         </li>
                     </Fade>
 
-                    <Fade bottom>
+                    {/* <Fade bottom>
                         <li className='col' >
                             <h4>Technologies</h4>
                             <div>
-                                <div style={{minWidth:'250px'}} className='row m-auto'>
+                                <div style={{ minWidth: '250px' }} className='row m-auto'>
                                     {
                                         TECHNOLOGIES.map(technology =>
                                             <small key={technology} className='col-5 mt-4 m-auto text-start'><VerifiedIcon /> {technology}</small>
@@ -67,7 +65,7 @@ const Skills = () => {
                                 </div>
                             </div>
                         </li>
-                    </Fade>
+                    </Fade> */}
                 </ul>
             </StyledCard >
 

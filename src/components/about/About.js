@@ -27,7 +27,7 @@ function About() {
 
           <div className='col-md-6'>
             <StyledCard>
-              <ul className='row gap-3' >
+              <ul className='row gap-3 border' >
                 <li className='col' data-aos="zoom-in">
                   <h5>Experience</h5>
                   <small>{currentYear - 2022}+ years Working</small>
