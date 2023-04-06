@@ -9,7 +9,7 @@ const currentYear = currentDate.getFullYear();
 function About() {
   return (
     <section id='about'>
-      <div className='text-center mb-3'>
+      <div className='text-center'>
         <h6>Get To Know</h6>
         <h5>About Me</h5>
       </div>
@@ -25,7 +25,7 @@ function About() {
             </div>
           </StyledPic>
 
-          <div className='col-md-6 mt-3'>
+          <div className='col-md-6'>
             <StyledCard>
               <ul className='row gap-3' >
                 <li className='col' data-aos="zoom-in">

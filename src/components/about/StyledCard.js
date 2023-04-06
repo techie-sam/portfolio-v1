@@ -1,6 +1,10 @@
 import styled from "styled-components";
 const StyledCard = styled.div`
-    li{
+ul{
+    margin:0;
+    padding:0;
+}
+li{
         background: var(--color-bg-variant);
         border: 1px solid transparent;
         border-radius: 1rem;
