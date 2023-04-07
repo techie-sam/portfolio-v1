@@ -26,19 +26,19 @@ body{
 }
 section{
   margin-top: 8rem;
-  min-width: 90%;
+  /* max-width: 90%; */
   margin: auto;
   padding: 10px;
 }
-@media screen and (min-width: 500px){
-  section{
-    max-width: 75%;
-  }
-}  
 @media screen and (max-width: 300px ){
   section{
     min-width: 100%;
     border:1px solid red
+  }
+}  
+@media screen and (min-width: 300px){
+  section{
+    max-width: 75%;
   }
 }  
 @media screen and (max-width: 500px){

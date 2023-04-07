@@ -7,7 +7,7 @@ import { Fade } from 'react-reveal'
 const Projects = () => {
     const PROJECTS = [
         { name: "Quizlet quiz App", liveDemo: "https://quizlet001.netlify.app", image: quizlet, gitHub: "https://github.com/techie-sam/cbt_react_app" },
-        { name: "React Portfolio", liveDemo: "https://quizlet001.netlify.app", image: portfolio, gitHub: "https://quizlet001.netlify.app" },
+        { name: "React Portfolio", liveDemo: "#", image: portfolio, gitHub: "https://quizlet001.netlify.app" },
         { name: "Weather App", liveDemo: "https://weathermate001.netlify.app", image: "", gitHub: "https://github.com/techie-sam/weather-app" },
         { name: "React Portfolio", liveDemo: "https://techie-sam.netlify.app", image: "", gitHub: "https://quizlet001.netlify.app" },
         { name: "React Portfolio", liveDemo: "https://techie-sam.netlify.app", image: "", gitHub: "https://quizlet001.netlify.app" },
@@ -30,7 +30,7 @@ const Projects = () => {
                                             <img src={image} className="w-100" alt={name} />
                                             <h4 className='p-3'>{name}</h4>
                                         </div>
-                                        <a href={liveDemo} target="_blank" rel="noreferrer" className="btn btnPrimary m-1">Live Demo</a>
+                                        <a href={liveDemo} target={ name === "React Portfolio"? null :"_blank" } rel="noreferrer" className="btn btnPrimary m-1">Live Demo</a>
                                         <a href={gitHub} target="_blank" rel="noreferrer" className="btn btnPrimary m-1">Github</a>
                                     </li>
                             </Fade>

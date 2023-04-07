@@ -18,6 +18,11 @@ li{
             min-width:13em;
         }
     }  
+    @media screen and (min-width: 500px){
+        li{
+            min-width:15em;
+        }
+    }  
     li:hover{
         background: transparent;
         border-color: var(--color-primary-variant);

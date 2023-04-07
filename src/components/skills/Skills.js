@@ -14,14 +14,14 @@ const TECHNOLOGIES = [
     "Bootstrap",
     "Tailwind",
     "React",
-    "Material UI",
+    "MUI",
     "Redux",
     "Next JS",
 ]
 const Skills = () => {
     return (
 
-        <section id="skills" className='borer'>
+        <section id="skills">
             <div className='text-center mt-5'>
                 <h6>Get to know</h6>
                 <h5>About my Skills</h5>
@@ -52,20 +52,20 @@ const Skills = () => {
                         </li>
                     </Fade>
 
-                    {/* <Fade bottom>
+                    <Fade bottom>
                         <li className='col' >
                             <h4>Technologies</h4>
                             <div>
-                                <div style={{ minWidth: '250px' }} className='row m-auto'>
+                                <div  className='row justify-content-evenly m-auto'>
                                     {
                                         TECHNOLOGIES.map(technology =>
-                                            <small key={technology} className='col-5 mt-4 m-auto text-start'><VerifiedIcon /> {technology}</small>
+                                            <small style={{fontSize:'0.79em'}} key={technology} className='col-5 mt-4 m-auto text-start borde'><VerifiedIcon style={{fontSize:'0.9em'}} /> {technology}</small>
                                         )
                                     }
                                 </div>
                             </div>
                         </li>
-                    </Fade> */}
+                    </Fade>
                 </ul>
             </StyledCard >
 
