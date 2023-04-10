@@ -1,7 +1,7 @@
 import React from 'react'
 import StyledCard from '../about/StyledCard'
 import quizlet from '../../assets/quizlet.png'
-import portfolio from '../../assets/portfolio.PNG'
+import portfolio from '../../assets/portfolio.png'
 import { Fade } from 'react-reveal'
 
 const Projects = () => {
@@ -9,9 +9,9 @@ const Projects = () => {
         { name: "Quizlet quiz App", liveDemo: "https://quizlet001.netlify.app", image: quizlet, gitHub: "https://github.com/techie-sam/cbt_react_app" },
         { name: "React Portfolio", liveDemo: "#", image: portfolio, gitHub: "https://quizlet001.netlify.app" },
         { name: "Weather App", liveDemo: "https://weathermate001.netlify.app", image: "", gitHub: "https://github.com/techie-sam/weather-app" },
-        { name: "React Portfolio", liveDemo: "https://techie-sam.netlify.app", image: "", gitHub: "https://quizlet001.netlify.app" },
-        { name: "React Portfolio", liveDemo: "https://techie-sam.netlify.app", image: "", gitHub: "https://quizlet001.netlify.app" },
-        { name: "React Portfolio", liveDemo: "https://techie-sam.netlify.app", image: "", gitHub: "https://quizlet001.netlify.app" },
+        { name: "Twitter Clone", liveDemo: "https://techie-sam.netlify.app", image: "", gitHub: "https://quizlet001.netlify.app" },
+        { name: "React Portfolio0", liveDemo: "https://techie-sam.netlify.app", image: "", gitHub: "https://quizlet001.netlify.app" },
+        { name: "React Portfoli", liveDemo: "https://techie-sam.netlify.app", image: "", gitHub: "https://quizlet001.netlify.app" },
     ]
     return (
         <section id="projects">

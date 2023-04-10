@@ -13,7 +13,7 @@ const items = [
 
 const Home = () => {
   const [inProp, setInProp] = useState(false);
-  const [CTAdisplay, setCTAdisplay  ] = useState(false);
+  const [CTAdisplay, setCTAdisplay] = useState(false);
 
   useEffect(() => {
     const timeout = setTimeout(() => setInProp(true), 1000);
@@ -23,11 +23,11 @@ const Home = () => {
 
   return (
 
-    <section id='home'>
-      <StyledHeader>
-        <TransitionGroup>
-          <header className='m-auto'>
-            {inProp && items.map((item, i) =>
+    <header id='home' className='m-auto'>
+      <section >
+        <StyledHeader>
+          <TransitionGroup>
+            {inProp  && items.map((item, i) =>
               <CSSTransition key={i} in={inProp} timeout={2000} classNames="fadeup">
                 <div className="fadeup-component" style={{ transitionDelay: `${i + 1}00ms` }} >
                   {item}
@@ -37,10 +37,10 @@ const Home = () => {
             {
               CTAdisplay && <CTA />
             }
-          </header>
-        </TransitionGroup>
-      </ StyledHeader>
-    </section>
+          </TransitionGroup>
+        </ StyledHeader>
+      </section>
+    </header>
 
   )
 };

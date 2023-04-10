@@ -3,7 +3,7 @@ const StyledHeader = styled.header`
   h1{
     font-size: 3rem;
     color: var(--light-slate);
-    font-weight: 700;
+    font-weight: 1000;
   } 
   h5{
     color: var(--color-primary)
