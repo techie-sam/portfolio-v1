@@ -5,6 +5,7 @@ import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
 import { Box } from '@mui/material';
 
+
 const currentDate = new Date();
 const currentYear = currentDate.getFullYear();
 
@@ -15,7 +16,6 @@ function About() {
         <h6>Get To Know</h6>
         <h5>About Me</h5>
       </div>
-      
         <div className='container m-auto d-md-flex gap-5 justify-content-between'>
           <StyledPic>
             <div className="wrapper rounded-circle">

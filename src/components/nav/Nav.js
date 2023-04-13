@@ -6,11 +6,14 @@ import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
 import SpeakerNotesIcon from '@mui/icons-material/SpeakerNotes';
 import StyledNav from './StyledNav';
 
+
+
 const Nav = () => {
     const [activeNav, setActiveNav] = useState("#")
 
     return (
         <StyledNav>
+
             <nav>
                 <a href="#home" onClick={() => setActiveNav("#")} className={activeNav === '#' ? 'active' : ""}>
                     <HomeRoundedIcon className='fs-6' />

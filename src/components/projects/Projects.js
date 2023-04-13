@@ -17,7 +17,7 @@ const Projects = () => {
                 <h6>Recent Projects</h6>
                 <h5>Projects</h5>
             </div>
-            <StyledCard>
+            <StyledCard> 
 
                 <ul className='row gap-3'>
                     {
