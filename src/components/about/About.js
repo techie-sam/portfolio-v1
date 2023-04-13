@@ -1,7 +1,6 @@
 import pic from '../../assets/me.png'
 import StyledPic from './StyledPic';
 import StyledCard from './StyledCard';
-import Fade from 'react-reveal/Fade';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
 import { Box } from '@mui/material';
@@ -17,7 +16,6 @@ function About() {
         <h5>About Me</h5>
       </div>
       
-      <Fade duration={2500} bottom>
         <div className='container m-auto d-md-flex gap-5 justify-content-between'>
           <StyledPic>
             <div className="wrapper rounded-circle">
@@ -55,7 +53,6 @@ function About() {
           </p>
           <a href="#contact" className="btn btnPrimary p-3">Let's Talk</a>
         </div>
-      </Fade>
     </section>
   );
 }

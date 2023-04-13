@@ -3,7 +3,6 @@ import StyledCard from '../about/StyledCard'
 import VerifiedIcon from '@mui/icons-material/Verified';
 import { CircularProgressbar } from "react-circular-progressbar";
 import 'react-circular-progressbar/dist/styles.css';
-import Fade from 'react-reveal/Fade';
 
 const LANGUAGES = [
     { language: "HTML", percentage: "90" },
@@ -28,7 +27,6 @@ const Skills = () => {
             </div>
             <StyledCard>
                 <ul className='row gap-5  mt-5' >
-                    <Fade bottom>
                         <li className='col' >
                             <h4>Language</h4>
                             <div style={{fontSize:'0.8em'}} className='d-flex mt-5 justify-content-evenly gap-4 m-auto' >
@@ -50,9 +48,7 @@ const Skills = () => {
                                 }
                             </div>
                         </li>
-                    </Fade>
 
-                    <Fade bottom>
                         <li className='col' >
                             <h4>Technologies</h4>
                             <div>
@@ -65,7 +61,6 @@ const Skills = () => {
                                 </div>
                             </div>
                         </li>
-                    </Fade>
                 </ul>
             </StyledCard >
 
