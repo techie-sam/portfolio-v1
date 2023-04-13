@@ -10,7 +10,7 @@ const currentYear = currentDate.getFullYear();
 
 function About() {
   return (
-    <section id='about'>
+    <section id='abou'>
       <div className='text-center'>
         <h6>Get To Know</h6>
         <h5>About Me</h5>
