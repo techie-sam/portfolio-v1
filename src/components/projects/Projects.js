@@ -1,8 +1,7 @@
 import React from 'react'
 import StyledCard from '../about/StyledCard'
 import quizlet from '../../assets/quizlet.png'
-import portfolio from '../../assets/portfolio.png'
-
+import portfolio from '../../assets/quizlet.png'
 const Projects = () => {
     const PROJECTS = [
         { name: "Quizlet quiz App", liveDemo: "https://quizlet001.netlify.app", image: quizlet, gitHub: "https://github.com/techie-sam/cbt_react_app" },
