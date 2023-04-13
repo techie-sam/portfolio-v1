@@ -22,18 +22,17 @@ const Contact = () => {
                 <h5>Contact Me</h5>
             </div>
             <StyledCard className='row gap-5 m-auto'>
-
                 <ul className='row gap-3 col-lg-4 col-12 m-auto'>
                     {
                         CONTACT_DETAILS.map(({ platform, address, link, icon }, i) =>
                             <Fade key={platform}>
-                                    <li>
-                                        <a href={link} target='_blank' className="text-decoration-none" rel="noreferrer">
-                                            <h6>{platform}</h6>
-                                            <small className='text-light d-block mb-3'>{address}</small>
-                                            <small>Send Message</small>
-                                        </a>
-                                    </li>
+                                <li>
+                                    <a href={link} target='_blank' className="text-decoration-none" rel="noreferrer">
+                                        <h6>{platform}</h6>
+                                        <small className='text-light d-block mb-3'>{address}</small>
+                                        <small>Send Message</small>
+                                    </a>
+                                </li>
                             </Fade>
                         )
                     }
@@ -46,9 +45,9 @@ const Contact = () => {
                                 className='d-block mt-4'
                                 InputProps={{
                                     style: {
-                                      color: '#ffff'
+                                        color: '#ffff'
                                     }
-                                  }}
+                                }}
                                 fullWidth
                                 id={id}
                                 label={label}

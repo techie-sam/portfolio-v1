@@ -16,7 +16,8 @@ function About() {
         <h6>Get To Know</h6>
         <h5>About Me</h5>
       </div>
-      <Fade bottom>
+      
+      <Fade duration={2500} bottom>
         <div className='container m-auto d-md-flex gap-5 justify-content-between'>
           <StyledPic>
             <div className="wrapper rounded-circle">
