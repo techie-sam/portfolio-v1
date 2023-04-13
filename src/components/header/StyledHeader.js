@@ -1,5 +1,6 @@
 import styled from "styled-components";
 const StyledHeader = styled.header`
+
   h1{
     font-size: 3rem;
     color: var(--light-slate);
@@ -11,6 +12,7 @@ const StyledHeader = styled.header`
   @media screen and (max-width: 500px){
     h1{
       font-size:2.5em;
+      padding:8px 0 15px 0
     }
     h5{
       font-size:1em
@@ -35,18 +37,7 @@ const StyledHeader = styled.header`
       display: flex;
       gap: 1.2rem;
   }
-  .animation {
-    opacity: 0;
-    transform: translateX(-300px);
-    transition: all 0.7s ease-out;
-    transition-delay: 0.4s;
 
-}
-
-.scroll-animation {
-    opacity: 1;
-    transform: translateX(0);
-}
 `;
 
 export default StyledHeader
