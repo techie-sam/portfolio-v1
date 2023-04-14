@@ -18,7 +18,6 @@ const Projects = () => {
                 <h5>Projects</h5>
             </div>
             <StyledCard>
-
                 <ul className='row gap-3'>
                     {
                         PROJECTS.map(({ name, liveDemo, gitHub, image }) =>
