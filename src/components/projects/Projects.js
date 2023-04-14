@@ -1,7 +1,7 @@
 import React from 'react'
 import StyledCard from '../about/StyledCard'
 import quizlet from '../../assets/quizlet.png'
-import portfolio from '../../assets/quizlet.png'
+import portfolio from '../../assets/portfolio.png'
 const Projects = () => {
     const PROJECTS = [
         { name: "Quizlet quiz App", liveDemo: "https://quizlet001.netlify.app", image: quizlet, gitHub: "https://github.com/techie-sam/cbt_react_app" },
@@ -17,19 +17,19 @@ const Projects = () => {
                 <h6>Recent Projects</h6>
                 <h5>Projects</h5>
             </div>
-            <StyledCard> 
+            <StyledCard>
 
                 <ul className='row gap-3'>
                     {
                         PROJECTS.map(({ name, liveDemo, gitHub, image }) =>
-                                    <li className='col-sm col-12' key={name}>
-                                        <div>
-                                            <img src={image} className="w-100" alt={name} />
-                                            <h4 className='p-3'>{name}</h4>
-                                        </div>
-                                        <a href={liveDemo} target={ name === "React Portfolio"? null :"_blank" } rel="noreferrer" className="btn btnPrimary m-1">Live Demo</a>
-                                        <a href={gitHub} target="_blank" rel="noreferrer" className="btn btnPrimary m-1">Github</a>
-                                    </li>
+                            <li className='col-sm col-12' key={name}>
+                                <div>
+                                    <img src={image} className="w-100" alt={name} />
+                                    <h4 className='p-3'>{name}</h4>
+                                </div>
+                                <a href={liveDemo} target={name === "React Portfolio" ? null : "_blank"} rel="noreferrer" className="btn btnPrimary m-1">Live Demo</a>
+                                <a href={gitHub} target="_blank" rel="noreferrer" className="btn btnPrimary m-1">Github</a>
+                            </li>
                         )
                     }
                 </ul>

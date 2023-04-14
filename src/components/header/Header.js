@@ -18,7 +18,6 @@ const Home = () => {
   return (
 
     <header id='home' className='m-auto'>
-
       <section >
         <StyledHeader>
           <motion.div initial="hidden" animate="visible" variants={containerVariant}>
@@ -26,8 +25,8 @@ const Home = () => {
               <motion.div variants={childVariant}>{item}</motion.div>
             )}
           </motion.div>
+          <CTA />
           {
-          <CTA  />
           }
         </ StyledHeader>
       </section>
