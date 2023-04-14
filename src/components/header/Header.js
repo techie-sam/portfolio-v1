@@ -1,5 +1,3 @@
-import React, { useEffect, useState } from 'react';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import StyledHeader from './StyledHeader';
 import CTA from './CTA';
 import { motion } from 'framer-motion';
