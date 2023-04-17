@@ -1,7 +1,7 @@
 import headshot from '../../assets/me.png'
 import StyledPic from './StyledPic';
 import { motion } from 'framer-motion';
-import { cardVariants } from '../../styles/ScrollEffectAnimationVariant';
+import { textVariants } from '../../styles/ScrollEffectAnimationVariant';
 
 const HeadShot = () => {
   return (
@@ -9,7 +9,7 @@ const HeadShot = () => {
     <motion.div
       initial="offscreen"
       whileInView="onscreen"
-      variants={cardVariants}
+      variants={textVariants}
       viewport={{ once: true }}
       className="wrapper rounded-circle">
       <img
