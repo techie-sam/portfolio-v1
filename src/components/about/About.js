@@ -1,12 +1,11 @@
-import pic from '../../assets/me.png'
+import headshot from '../../assets/me.png'
 import StyledPic from './StyledPic';
-import StyledCard from './StyledCard';
+import StyledCard from '../../styles/StyledCard';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
 import { Box } from '@mui/material';
-import { MotionConfig } from 'framer-motion';
 import { motion } from 'framer-motion';
-import { cardVariants } from '../../ScrollEffectAnimationVariant';
+import { cardVariants } from '../../styles/ScrollEffectAnimationVariant';
 
 
 const currentDate = new Date();
@@ -14,28 +13,40 @@ const currentYear = currentDate.getFullYear();
 
 function About() {
   return (
-    <motion.section variants={cardVariants} className="card-container"
-      initial="offscreen"
-      whileInView="onscreen"
-      viewport={{ once: true, amount: 0.90 }} id='abou'>
+    <section  className="card-container"
+
+       id='about'>
       <div className='text-center'>
         <h6>Get To Know</h6>
-        <h5>About Me</h5>
+        <h5>About Us</h5>
       </div>
       <div className='container m-auto d-md-flex gap-5 justify-content-between'>
         <StyledPic>
-          <motion.div variants={cardVariants} className="wrapper rounded-circle">
+          <motion.div       
+          initial="offscreen"
+          whileInView="onscreen" 
+          variants={cardVariants}
+          viewport={{ once: true }}
+          className="wrapper rounded-circle">
             <img
               className="img w-100"
-              src={pic}
+              src={headshot}
               alt="head-shot"
             />
-          </motion.div>
+          </motion.div>          
         </StyledPic>
 
         <StyledCard>
+
           <ul className='row mt-3 mt-lg-5 gap-3 justify-content-center' >
-            <li className='col-md-3 col' data-aos="zoom-in">
+            
+            <motion.li  
+            variants={cardVariants}  
+            initial="offscreen"
+            whileInView="onscreen" 
+            viewport={{ once: true }}
+            className='col-md-3 col' 
+            data-aos="zoom-in">
               <span>
                 <Box mb={3}>
                   <WorkspacePremiumIcon fontSize='large' />
@@ -43,14 +54,20 @@ function About() {
                 <h6>Experience</h6>
                 <small className='mt-5 p-3'>{currentYear - 2022}+ years Working</small>
               </span>
-            </li>
-            <li className='col-md-3 col' data-aos="zoom-in">
+            </motion.li >
+            <motion.li 
+            variants={cardVariants} 
+            initial="offscreen"
+            whileInView="onscreen"
+            className='col-md-3 col' 
+            viewport={{ once: true }}
+            data-aos="zoom-in">
               <Box mb={3}>
                 <WorkHistoryIcon fontSize='large' />
               </Box>
               <h6>Projects</h6>
               <small>10+ Completed</small>
-            </li>
+            </motion.li>
           </ul>
         </StyledCard>
       </div>
@@ -59,7 +76,7 @@ function About() {
         </p>
         <a href="#contact" className="btn btnPrimary p-3">Let's Talk</a>
       </div>
-    </motion.section>
+    </section>
   );
 }
 export default About

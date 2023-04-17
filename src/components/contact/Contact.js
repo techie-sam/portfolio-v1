@@ -1,5 +1,5 @@
 import React from 'react'
-import StyledCard from '../about/StyledCard'
+import StyledCard from '../../styles/StyledCard'
 import TextField from '@mui/material/TextField';
 import { linkedinAddress, emailAddress, whatsappLink } from '../../constants';
 

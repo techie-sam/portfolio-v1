@@ -1,5 +1,5 @@
 import React from 'react'
-import StyledCard from '../about/StyledCard'
+import StyledCard from '../../styles/StyledCard'
 import VerifiedIcon from '@mui/icons-material/Verified';
 import { CircularProgressbar } from "react-circular-progressbar";
 import 'react-circular-progressbar/dist/styles.css';

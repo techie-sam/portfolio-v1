@@ -22,14 +22,6 @@
   --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
 }
 
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background: var(--color-bg);
-  color: var(--color-white);
-  line-height: 1.7rem;
-}
-
 section {
   margin-top: 8rem;
   margin: auto;
@@ -95,6 +87,6 @@ h5 {
 
 header {
   min-height: 100vh;
-  /* padding-top: 5rem; */
+  padding-top: 30vh;
   overflow: hidden;
 }

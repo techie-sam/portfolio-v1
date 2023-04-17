@@ -15,20 +15,17 @@ const Home = () => {
 
   return (
 
-    <header id='home' className='m-auto'>
-      <section >
-        <StyledHeader>
-          <motion.div initial="hidden" animate="visible" variants={containerVariant}>
-            {items.map((item, i) =>
-              <motion.div variants={childVariant}>{item}</motion.div>
-            )}
-          </motion.div>
-          <CTA />
-          {
-          }
-        </ StyledHeader>
-      </section>
-    </header>
+    <StyledHeader id='home'>
+      <section>
+        <motion.div initial="hidden" animate="visible" variants={containerVariant}>
+          {items.map((item, i) =>
+            <motion.div variants={childVariant}>{item}</motion.div>
+          )}
+        </motion.div>
+        <CTA />
+      </section >
+    </ StyledHeader>
+
 
   )
 };

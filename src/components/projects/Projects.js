@@ -1,5 +1,5 @@
 import React from 'react'
-import StyledCard from '../about/StyledCard'
+import StyledCard from '../../styles/StyledCard'
 import quizlet from '../../assets/quizlet.png'
 import portfolio from '../../assets/react-portfolio.png'
 const Projects = () => {
