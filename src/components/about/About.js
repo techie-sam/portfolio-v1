@@ -13,8 +13,8 @@ function About() {
       <div className='container m-auto d-md-flex gap-5 justify-content-between'>
         <HeadShot />
         <AboutCards />
-        <AboutText/>
       </div>
+      <AboutText />
     </section>
   );
 }
