@@ -1,7 +1,9 @@
-import React from 'react'
-import StyledCard from '../../styles/StyledCard'
-import quizlet from '../../assets/quizlet.png'
-import portfolio from '../../assets/react-portfolio.png'
+import StyledCard from '../../styles/StyledCard';
+import quizlet from '../../assets/quizlet.png';
+import portfolio from '../../assets/react-portfolio.png';
+import { motion } from 'framer-motion';
+import { textVariants } from '../../styles/ScrollEffectAnimationVariant';
+
 const Projects = () => {
     const PROJECTS = [
         { name: "Quizlet quiz App", liveDemo: "https://quizlet001.netlify.app", image: quizlet, gitHub: "https://github.com/techie-sam/cbt_react_app" },
@@ -21,14 +23,19 @@ const Projects = () => {
                 <ul className='row gap-3'>
                     {
                         PROJECTS.map(({ name, liveDemo, gitHub, image }) =>
-                            <li className='col-sm col-12' key={name}>
+                            <motion.li
+                            variants={textVariants}
+                            initial="offscreen"
+                            whileInView="onscreen"
+                            viewport={{ once: true }}
+                             className='col-sm col-12' key={name}>
                                 <div>
                                     <img src={image} className="w-100" alt={name} />
                                     <h4 className='p-3'>{name}</h4>
                                 </div>
                                 <a href={liveDemo} target={name === "React Portfolio" ? null : "_blank"} rel="noreferrer" className="btn btnPrimary m-1">Live Demo</a>
                                 <a href={gitHub} target="_blank" rel="noreferrer" className="btn btnPrimary m-1">Github</a>
-                            </li>
+                            </motion.li>
                         )
                     }
                 </ul>

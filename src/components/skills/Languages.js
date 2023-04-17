@@ -11,12 +11,12 @@ const LANGUAGES = [
 
 const Languages = () => {
     return (
-        <motion.li 
-        className='col'
-        initial="offscreen"
-        whileInView="onscreen"
-        variants={cardVariants}
-        viewport={{ once: true }}
+        <motion.li
+            className='col'
+            initial="offscreen"
+            whileInView="onscreen"
+            variants={cardVariants}
+            viewport={{ once: true }}
         >
             <h4>Language</h4>
             <div style={{ fontSize: '0.8em' }} className='d-flex mt-5 justify-content-evenly gap-4 m-auto' >
