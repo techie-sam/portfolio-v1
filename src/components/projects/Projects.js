@@ -1,14 +1,15 @@
 import StyledCard from '../../styles/StyledCard';
 import quizlet from '../../assets/quizlet.png';
 import portfolio from '../../assets/react-portfolio.png';
+import vbank from '../../assets/v-bank-clone.png';
 import { motion } from 'framer-motion';
 import { textVariants } from '../../styles/ScrollEffectAnimationVariant';
 
 const Projects = () => {
     const PROJECTS = [
-        { name: "Quizlet quiz App", liveDemo: "https://quizlet001.netlify.app", image: quizlet, gitHub: "https://github.com/techie-sam/cbt_react_app" },
+        { name: "Quizlet Quiz App", liveDemo: "https://quizlet001.netlify.app", image: quizlet, gitHub: "https://github.com/techie-sam/cbt_react_app" },
         { name: "React Portfolio", liveDemo: "#", image: portfolio, gitHub: "https://quizlet001.netlify.app" },
-        { name: "Weather App", liveDemo: "https://weathermate001.netlify.app", image: "", gitHub: "https://github.com/techie-sam/weather-app" },
+        { name: "V Bank Clone", liveDemo: "https://v-bank001.vercel.app", image: vbank, gitHub: "https://github.com/techie-sam/v-bank" },
         { name: "Twitter Clone", liveDemo: "https://techie-sam.netlify.app", image: "", gitHub: "https://quizlet001.netlify.app" },
         { name: "React Portfolio0", liveDemo: "https://techie-sam.netlify.app", image: "", gitHub: "https://quizlet001.netlify.app" },
         { name: "React Portfoli", liveDemo: "https://techie-sam.netlify.app", image: "", gitHub: "https://quizlet001.netlify.app" },
