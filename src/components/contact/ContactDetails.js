@@ -1,4 +1,6 @@
 import { linkedinAddress, emailAddress, whatsappLink } from '../../constants';
+import { motion } from 'framer-motion';
+import { textVariants } from '../../styles/ScrollEffectAnimationVariant';
 
 const CONTACT_DETAILS = [
     { platform: "LinkedIn", address: "@techie-sam", link: linkedinAddress, icon: '' },
@@ -8,7 +10,12 @@ const CONTACT_DETAILS = [
 ]
 const ContactDetails = () => {
     return (
-        <ul className='row gap-3 col-lg-4 col-12 m-auto'>
+        <motion.ul 
+        variants={textVariants}  
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true }}
+        className='row gap-3 col-lg-4 col-12 m-auto'>
             {
                 CONTACT_DETAILS.map(({ platform, address, link }) =>
                     <li>
@@ -20,7 +27,7 @@ const ContactDetails = () => {
                     </li>
                 )
             }
-        </ul>
+        </motion.ul>
     )
 }
 
