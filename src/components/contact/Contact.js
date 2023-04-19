@@ -5,8 +5,9 @@ import { linkedinAddress, emailAddress, whatsappLink } from '../../constants';
 
 const Contact = () => {
     const CONTACT_DETAILS = [
-        { platform: "Email", address: "blessingabolade15@gmail.com", link: emailAddress, icon: '' },
-        { platform: "LinkedIn", address: "LinkedIn", link: linkedinAddress, icon: '' },
+        { platform: "LinkedIn", address: "@techie-sam", link: linkedinAddress, icon: '' },
+        { platform: "Email", address: "techiesam.dev@gmail.com", link: emailAddress, icon: '' },
+        { platform: "Twitter", address: "@techie_sam", link: whatsappLink, icon: '' },
         { platform: "WhatsApp", address: "Send a message", link: whatsappLink, icon: '' },
     ]
     const TEXT_FIELD_PROPS = [
@@ -23,7 +24,7 @@ const Contact = () => {
             <StyledCard className='row gap-5 m-auto'>
                 <ul className='row gap-3 col-lg-4 col-12 m-auto'>
                     {
-                        CONTACT_DETAILS.map(({ platform, address, link, icon }, i) =>
+                        CONTACT_DETAILS.map(({ platform, address, link }) =>
                                 <li>
                                     <a href={link} target='_blank' className="text-decoration-none" rel="noreferrer">
                                         <h6>{platform}</h6>
