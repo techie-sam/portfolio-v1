@@ -10,7 +10,7 @@ function About() {
         <h6>Get To Know</h6>
         <h5>About me</h5>
       </div>
-      <div className='container m-auto d-md-flex gap-5 justify-content-between'>
+      <div className='container m-auto d-md-flex gap-5 justify-content-evenly'>
         <HeadShot />
         <AboutCards />
       </div>
