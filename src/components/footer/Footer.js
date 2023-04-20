@@ -1,17 +1,11 @@
 import React from 'react'
 import StyledFooter from './StyledFooter'
-import { Twitter, LinkedIn, GitHub } from '@mui/icons-material'
-import { githubAddress, linkedinAddress, twitterAddress } from '../../constants'
+import ContactLinks from './ContactLinks'
+import PermaLinks from './PermaLinks'
+
 
 
 const Footer = () => {
-    const PREMALINKS = [
-        { link: '#', text: 'Home' },
-        { link: '#about', text: 'About' },
-        { link: '#skills', text: 'Skills' },
-        { link: '#projects', text: 'Projects' },
-        { link: '#contact', text: 'Conatct' },
-    ]
 
     return (
         <StyledFooter style={{ backgroundColor: 'var(--color-primary)', color: 'var(--light-slate)', paddingBottom: "10rem" }} className="text-light mt-5">
@@ -19,18 +13,8 @@ const Footer = () => {
                 <a href="#home" className="fs-3 fw-bold text-decoration-none">Samuel Abolade</a>
             </div>
 
-            <ul className="row gap-3 gap-lg-0 col-9 m-auto p-4">
-                {
-                    PREMALINKS.map(({ link, text }) =>
-                        <li key={text} className='col-12 col-lg fs-6 text-center'><a href={link} className='text-decoration-none'>{text}</a></li>
-                    )
-                }
-            </ul>
-            <div className='text-center gap-3'>
-                <a href={twitterAddress} rel="noreferrer" target="_blank" className='mx-2 rounded'><Twitter /></a>
-                <a href={linkedinAddress} rel="noreferrer" target="_blank" className='mx-2 rounded'><LinkedIn /></a>
-                <a href={githubAddress} rel="noreferrer" target="_blank" className='mx-2 rounded'><GitHub /></a>
-            </div>
+                <PermaLinks />
+                <ContactLinks />
             <div className="text-center mt-4">
                 <small>
                     &copy; Samuel Abolade. All right reserved.
