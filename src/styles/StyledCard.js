@@ -12,6 +12,7 @@ li{
         text-align: center;
         transform: var(--transition);
         min-width:15em;
+        transition: var(--transition)
     }
     @media screen and (max-width: 300px){
         li{
@@ -26,6 +27,7 @@ li{
     li:hover{
         background: transparent;
         border-color: var(--color-primary-variant);
+        transition
         cursor: default;
     }
 `;
