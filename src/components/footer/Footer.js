@@ -1,7 +1,6 @@
-import React from 'react'
-import StyledFooter from './StyledFooter'
-import ContactLinks from './ContactLinks'
-import PermaLinks from './PermaLinks'
+import StyledFooter from './StyledFooter';
+import ContactLinks from './ContactLinks';
+import PermaLinks from './PermaLinks';
 
 
 
@@ -12,7 +11,6 @@ const Footer = () => {
             <div className='text-center p-3'>
                 <a href="#home" className="fs-3 fw-bold text-decoration-none">Samuel Abolade</a>
             </div>
-
                 <PermaLinks />
                 <ContactLinks />
             <div className="text-center mt-4">

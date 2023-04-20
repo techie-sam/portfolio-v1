@@ -18,7 +18,7 @@ const ContactDetails = () => {
         className='row gap-3 col-lg-4 col-12 m-auto'>
             {
                 CONTACT_DETAILS.map(({ platform, address, link }) =>
-                    <li>
+                    <li key={link}>
                         <a href={link} target='_blank' className="text-decoration-none" rel="noreferrer">
                             <h6>{platform}</h6>
                             <small className='text-light d-block mb-3'>{address}</small>
