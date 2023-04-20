@@ -1,11 +1,11 @@
-import { linkedinAddress, emailAddress, whatsappLink } from '../../constants';
+import { linkedinAddress, emailAddress, whatsappLink, twitterAddress } from '../../constants';
 import { motion } from 'framer-motion';
 import { textVariants } from '../../styles/ScrollEffectAnimationVariant';
 
 const CONTACT_DETAILS = [
     { platform: "LinkedIn", address: "@techie-sam", link: linkedinAddress, icon: '' },
     { platform: "Email", address: "techiesam.dev@gmail.com", link: emailAddress, icon: '' },
-    { platform: "Twitter", address: "@techie_sam", link: whatsappLink, icon: '' },
+    { platform: "Twitter", address: "@techie_sam", link: twitterAddress, icon: '' },
     { platform: "WhatsApp", address: "Send a message", link: whatsappLink, icon: '' },
 ]
 const ContactDetails = () => {
