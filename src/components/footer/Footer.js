@@ -14,7 +14,7 @@ const Footer = () => {
     ]
 
     return (
-        <StyledFooter style={{ backgroundColor: 'var(--color-primary)', color: 'var(--light-slate)', paddingBottom:"10rem" }} className="text-light mt-5">
+        <StyledFooter style={{ backgroundColor: 'var(--color-primary)', color: 'var(--light-slate)', paddingBottom: "10rem" }} className="text-light mt-5">
             <div className='text-center p-3'>
                 <a href="#home" className="fs-3 fw-bold text-decoration-none">Samuel Abolade</a>
             </div>
@@ -26,10 +26,10 @@ const Footer = () => {
                     )
                 }
             </ul>
-            <div className='text-center'>
-                <a href={twitterAddress} rel="noreferrer" target="_blank"><Twitter /></a>
-                <a href={linkedinAddress} rel="noreferrer" target="_blank"><LinkedIn /></a>
-                <a href={githubAddress} rel="noreferrer" target="_blank"><GitHub /></a>
+            <div className='text-center gap-3'>
+                <a href={twitterAddress} rel="noreferrer" target="_blank" className='mx-2 rounded'><Twitter /></a>
+                <a href={linkedinAddress} rel="noreferrer" target="_blank" className='mx-2 rounded'><LinkedIn /></a>
+                <a href={githubAddress} rel="noreferrer" target="_blank" className='mx-2 rounded'><GitHub /></a>
             </div>
             <div className="text-center mt-4">
                 <small>
