@@ -23,7 +23,7 @@ const AboutCards = () => {
                         <WorkspacePremiumIcon fontSize='large' />
                     </Box>
                     <h6>Experience</h6>
-                    <small className='mt-5 p-3'>{currentYear - 2022}+ years Working</small>
+                    <small className='mt-5 p-3'>{currentYear - 2022}+ year(s)</small>
                 </motion.li >
 
                 <motion.li
