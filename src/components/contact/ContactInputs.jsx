@@ -16,7 +16,7 @@ const ContactInputs = () => {
             className='d-block mt-4'
             InputProps={{
               style: {
-                color: '#ffff'
+                color: '#ffff',
               }
             }}
             fullWidth
@@ -29,7 +29,7 @@ const ContactInputs = () => {
           />
         )
       }
-      <button className='btn btn-primary btnPrimary mt-3'>SEND MESSAGE</button>
+      <button className='btn btnPrimary mt-3'>SEND MESSAGE</button>
     </>
   )
 }

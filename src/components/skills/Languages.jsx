@@ -1,5 +1,3 @@
-import { CircularProgressbar } from "react-circular-progressbar";
-import 'react-circular-progressbar/dist/styles.css';
 import { motion } from "framer-motion";
 import { cardVariants } from "../../styles/ScrollEffectAnimationVariant";
 
