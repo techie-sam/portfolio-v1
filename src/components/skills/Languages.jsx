@@ -3,11 +3,7 @@ import 'react-circular-progressbar/dist/styles.css';
 import { motion } from "framer-motion";
 import { cardVariants } from "../../styles/ScrollEffectAnimationVariant";
 
-const LANGUAGES = [
-    { language: "HTML", percentage: "90" },
-    { language: "CSS", percentage: "75" },
-    { language: "Javascript", percentage: "80" },
-]
+const LANGUAGES = ["HTML", "CSS", "JAVASCRIPT", "PHP"]
 
 const Languages = () => {
     return (
@@ -19,21 +15,13 @@ const Languages = () => {
             viewport={{ once: true }}
         >
             <h4>Language</h4>
-            <div style={{ fontSize: '0.8em' }} className='d-flex mt-5 justify-content-evenly gap-4 m-auto' >
+            <div style={{ fontSize: '1em' }} className='mt-5 row justify-content-evenly gap-4 m-auto' >
                 {
-                    LANGUAGES.map(({ language, percentage }) =>
-                        <div className="col-3" key={language}>
-                            <CircularProgressbar styles={{
-                                root: { width: "70%", },
-                                path: { stroke: "var(--color-primary)" },
-                                trail: { stroke: "#d6d6d6" },
-                                text: { fill: "var(--light-slate)", fontSize: "1.5em" },
-                            }}
-                                className='m-auto col row'
-                                value={percentage}
-                                text={`${percentage}%`} />
+                    LANGUAGES.map(language => (
+                        <div className="col-4 border rounded rounded-3" key={language}>
                             <p className='mt-2 col'> {language}</p>
                         </div>
+                    )
                     )
                 }
             </div>
