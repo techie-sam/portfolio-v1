@@ -1,4 +1,3 @@
-
 :root {
   --color-bg: #1f1f38;
   --color-bg-variant: #2c2c6c;
@@ -35,7 +34,7 @@ section {
 
 @media screen and (max-width: 500px) {
   section {
-    min-width: 85%;
+    min-width: 90%;
   }
 }
 
