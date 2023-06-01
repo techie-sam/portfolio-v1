@@ -6,7 +6,7 @@ import { childVariant, containerVariant } from './HeaderAnimationStyles';
 const items = [
   <h5>Hi, my name is</h5>,
   <h1 >Samuel Abolade.</h1>,
-  <h6>Front-end Developer</h6>
+  <h6>Software Engineer</h6>
 ];
 
 

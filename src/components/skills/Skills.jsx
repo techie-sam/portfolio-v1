@@ -1,4 +1,3 @@
-import React from 'react'
 import StyledCard from '../../styles/StyledCard'
 import Languages from './Languages';
 import Technologies from './Technologies';
