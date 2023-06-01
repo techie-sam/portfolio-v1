@@ -13,7 +13,7 @@ const Projects = () => {
             image: quizlet, gitHub: "https://github.com/techie-sam/cbt_react_app",
             description: "A test app designed to combats exam malpractice. Create and take tests online with multiple-choice questions, timed tests, and advanced analytics for progress tracking."
         },
-        
+
         {
             name: "React Portfolio",
             liveDemo: "#",

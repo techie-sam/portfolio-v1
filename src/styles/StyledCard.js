@@ -30,9 +30,6 @@ li{
         transition
         cursor: default;
     }
-    small{
-        text-align: justify !important;
-    }
 
 `;
 export default StyledCard
