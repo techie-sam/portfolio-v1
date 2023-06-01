@@ -25,8 +25,8 @@ const Technologies = () => {
 
                     {
                         TECHNOLOGIES.map(technology =>
-                            <small style={{ fontSize: '0.8em' }} key={technology} className='col-5 m-auto text-start'>
-                                <VerifiedIcon style={{ fontSize: '0.9em' }} /> {technology}
+                            <small style={{ fontSize: '0.9em' }} key={technology} className='col-5 m-auto text-start'>
+                                <VerifiedIcon style={{ fontSize: '1.2em' }} /> {technology}
                             </small>
                         )
                     }
