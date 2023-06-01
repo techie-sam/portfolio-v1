@@ -5,9 +5,9 @@ const TECHNOLOGIES = [
     "Bootstrap",
     "Tailwind",
     "React",
-    "MUI",
     "Redux",
     "Next JS",
+    "Node JS",
 ]
 
 const Technologies = () => {
