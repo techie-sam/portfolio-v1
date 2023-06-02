@@ -41,18 +41,29 @@ const ContactInputs = () => {
       }
       return errors
     },
-    onSubmit: () => {
-      // console.log(djhwkdww)
-      // if 
-      console.log(errors)
-      //   console.log(formik.touched)
-      //  console.log(formik.dirty)
-      // console.log(errors)
+    onSubmit: (values, {setSubmitting}) => {
+      console.log(formik.isSubmitting)
+      const res = fetch("https://techiesamm.vercel.app/", { method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+        // Access-Control-Allow-Origin
+      },
+      body: JSON.stringify(values)})
+      .then(response => response.json())
+      .then(data => {
+        setSubmitting(false)
+        // Handle the response data
+        console.log(data);
+      })
+      .catch(error => {
+        setSubmitting(false)
+        // Handle any errors
+        console.error('Error:', error);
+      });
     },
 
 
   })
-  // console.log(formik.handle)
 
 
 
@@ -79,8 +90,10 @@ const ContactInputs = () => {
                   color: '#ffff',
                 }
               }}
+
               error={formik.touched[name] ? formik.errors[name] : false}
               helperText={<span className='text-danger'>{formik.touched[name] ? formik.errors[name] : null}</span>}
+
               fullWidth
               label={label}
               focused
@@ -90,7 +103,7 @@ const ContactInputs = () => {
             />
           )
         }
-        <button type='submit' className='btn rounded btnPrimary mt-3'>SEN MESSAGE</button>
+        <button type='submit' className='btn rounded btnPrimary mt-3'>{formik.isSubmitting?"Sending..........":"SEND MESSAGE"}</button>
       </form>
     </>
   )
