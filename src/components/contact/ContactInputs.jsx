@@ -1,7 +1,5 @@
 import TextField from '@mui/material/TextField';
 import { useFormik } from 'formik';
-import { useRef } from 'react';
-
 
 const TEXT_FIELD_PROPS = [
   { name: "fullName", label: "Full Name", placeholder: "John Doe", multiline: false },
@@ -20,10 +18,7 @@ const ContactInputs = () => {
   const formik = useFormik({
     initialValues,
     validate: (values) => {
-      // const { fullName, email, message } = values
       const errors = {}
-
-      // console.log(values)
       if (!values.fullName) {
         errors.fullName = "Full Name is required"
       } else if (values.fullName.length > 15) {
@@ -41,28 +36,24 @@ const ContactInputs = () => {
       }
       return errors
     },
-    onSubmit: (values, {setSubmitting}) => {
-      console.log(formik.isSubmitting)
-      const res = fetch("https://techiesamm.vercel.app/", { method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-        // Access-Control-Allow-Origin
-      },
-      body: JSON.stringify(values)})
-      .then(response => response.json())
-      .then(data => {
-        setSubmitting(false)
-        // Handle the response data
-        console.log(data);
+    onSubmit: (values, { setSubmitting }) => {
+      const res = fetch("http://techiesamm.vercel.app", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': 'http://localhost:5173'
+        },
+        body: JSON.stringify(values)
       })
-      .catch(error => {
-        setSubmitting(false)
-        // Handle any errors
-        console.error('Error:', error);
-      });
+        .then(response => response.json())
+        .then(data => {
+          setSubmitting(false)
+          console.log(data);
+        })
+        .catch(error => {
+          setSubmitting(false)
+        });
     },
-
-
   })
 
 
@@ -103,7 +94,7 @@ const ContactInputs = () => {
             />
           )
         }
-        <button type='submit' className='btn rounded btnPrimary mt-3'>{formik.isSubmitting?"Sending..........":"SEND MESSAGE"}</button>
+        <button type='submit' className='btn rounded btnPrimary mt-3'>{formik.isSubmitting ? "Sending.........." : "SEND MESSAGE"}</button>
       </form>
     </>
   )
