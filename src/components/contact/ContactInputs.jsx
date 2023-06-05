@@ -1,5 +1,8 @@
 import TextField from '@mui/material/TextField';
 import { useFormik } from 'formik';
+import CircularProgress from '@mui/material/CircularProgress';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const TEXT_FIELD_PROPS = [
   { name: "fullName", label: "Full Name", placeholder: "John Doe", multiline: false },
@@ -36,8 +39,8 @@ const ContactInputs = () => {
       }
       return errors
     },
-    onSubmit: (values, { setSubmitting }) => {
-      const res = fetch("https://techiesamm.vercel.app", {
+    onSubmit: (values, { setSubmitting, resetForm,  }) => {
+      fetch(import.meta.env.VITE_API_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -47,10 +50,13 @@ const ContactInputs = () => {
         .then(response => response.json())
         .then(data => {
           setSubmitting(false)
-          console.log(data);
+          resetForm()
+          toast.success("data.message")
         })
         .catch(error => {
           setSubmitting(false)
+          resetForm()
+          toast.error(`Error:${error.message}` )
         });
     },
   })
@@ -60,6 +66,7 @@ const ContactInputs = () => {
   return (
     <>
       <form onSubmit={formik.handleSubmit}>
+        <ToastContainer/>
         {
           TEXT_FIELD_PROPS.map(({ name, label, rows, placeholder, multiline }) =>
             <TextField
@@ -72,7 +79,7 @@ const ContactInputs = () => {
               id={name}
               onBlur={formik.handleBlur}
               onChange={formik.handleChange}
-
+              value={formik.values[name]}
 
               //  ========== MUI PROPERTIES ==========
               InputProps={{
@@ -93,7 +100,7 @@ const ContactInputs = () => {
             />
           )
         }
-        <button type='submit' className='btn rounded btnPrimary mt-3'>{formik.isSubmitting ? "Sending.........." : "SEND MESSAGE"}</button>
+        <button type='submit' className='btn rounded btnPrimary px-5 mt-3' disabled={formik.isSubmitting}>{formik.isSubmitting ? <CircularProgress size={20} color="inherit"/> : "SEND MESSAGE"}</button>
       </form>
     </>
   )
