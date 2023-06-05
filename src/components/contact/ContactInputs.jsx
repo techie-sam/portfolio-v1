@@ -37,7 +37,7 @@ const ContactInputs = () => {
       return errors
     },
     onSubmit: (values, { setSubmitting }) => {
-      const res = fetch("http://techiesamm.vercel.app", {
+      const res = fetch("https://techiesamm.vercel.app", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
