@@ -2,25 +2,18 @@ import StyledCard from '../../styles/StyledCard';
 import quizlet from '../../assets/quizlet.png';
 import portfolio from '../../assets/react-portfolio.png';
 import vbank from '../../assets/v-bank-clone.png';
+import trems from '../../assets/trems-nigeria.png'
 import { motion } from 'framer-motion';
 import { textVariants } from '../../styles/ScrollEffectAnimationVariant';
 
 const Projects = () => {
     const PROJECTS = [
         {
-            name: "Quizlet Quiz App",
-            liveDemo: "https://quizlet001.vercel.app",
-            image: quizlet, gitHub: "https://github.com/techie-sam/cbt_react_app",
-            description: "A test app designed to combats exam malpractice. Create and take tests online with multiple-choice questions, timed tests, and advanced analytics for progress tracking."
-        },
-
-        {
-            name: "React Portfolio",
-            liveDemo: "#",
-            image: portfolio,
-            gitHub: "https://github.com/techie-sam/portfoliov1",
-            description: "Portfolio site showcasing my skills in building responsive web applications using React, Bootstrap, and Material-UI."
-
+            name: "Trems Nigeria",
+            liveDemo: "https://tremsnigeria.com",
+            image: trems,
+            gitHub: "https://quizlet001.netlify.app",
+            description: "The website has significantly boosted TREMS Nigeria brand income through its Search Engine Optimization (SEO), seamless user experience, intuitive navigation which have attracted a significant influx of new clients",
         },
         {
             name: "V-Pay",
@@ -29,23 +22,20 @@ const Projects = () => {
             gitHub: "https://github.com/techie-sam/v-bank",
             description: "A functional banking solution which allows users to simulate transactions, manage accounts, and view balances in a secure and reliable environment. The app is built using vanilla JavaScript, HTML, and CSS, and offers a range of basic features.",
         },
+        {
+            name: "Quizlet Quiz App",
+            liveDemo: "https://quizlet001.vercel.app",
+            image: quizlet, gitHub: "https://github.com/techie-sam/cbt_react_app",
+            description: "A test app designed to combats exam malpractice. Create and take tests online with multiple-choice questions, timed tests, and advanced analytics for progress tracking."
+        },
+
         // {
-        //     name: "Twitter Clone",
-        //     liveDemo: "https://techie-sam.netlify.app",
-        //     image: "",
-        //     gitHub: "https://quizlet001.netlify.app"
-        // },
-        // {
-        //     name: "React Portfolio0",
-        //     liveDemo: "https://techie-sam.netlify.app",
-        //     image: "",
-        //     gitHub: "https://quizlet001.netlify.app"
-        // },
-        // {
-        //     name: "React Portfoli",
-        //     liveDemo: "https://techie-sam.netlify.app",
-        //     image: "",
-        //     gitHub: "https://quizlet001.netlify.app"
+        //     name: "React Portfolio",
+        //     liveDemo: "#",
+        //     image: portfolio,
+        //     gitHub: "https://github.com/techie-sam/portfoliov1",
+        //     description: "Portfolio site showcasing my skills in building responsive web applications using React, Bootstrap, and Material-UI."
+
         // },
     ]
     return (
