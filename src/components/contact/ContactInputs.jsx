@@ -40,23 +40,26 @@ const ContactInputs = () => {
       return errors
     },
     onSubmit: (values, { setSubmitting, resetForm,  }) => {
-      fetch(import.meta.env.VITE_API_URL, {
+      fetch("http://localhost:5000", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(values)
       })
-        .then(response => response.json())
+
+        .then(response =>response.json())
         .then(data => {
-          setSubmitting(false)
-          resetForm()
-          toast.success("data.message")
+          console.log(data)
+          // setSubmitting(false)
+          // resetForm()
+          // toast.success("data.message")
         })
         .catch(error => {
-          setSubmitting(false)
-          resetForm()
-          toast.error(`Error:${error.message}` )
+          console.log(error)
+          // setSubmitting(false)
+          // resetForm()
+          // toast.error(`Error:${error.message}` )
         });
     },
   })
