@@ -50,16 +50,14 @@ const ContactInputs = () => {
 
         .then(response =>response.json())
         .then(data => {
-          console.log(data)
-          // setSubmitting(false)
-          // resetForm()
-          // toast.success("data.message")
+          setSubmitting(false)
+          resetForm()
+          toast.success("Message Sent Successfully")
         })
         .catch(error => {
-          console.log(error)
-          // setSubmitting(false)
-          // resetForm()
-          // toast.error(`Error:${error.message}` )
+          setSubmitting(false)
+          resetForm()
+          toast.error("An error occured")
         });
     },
   })
