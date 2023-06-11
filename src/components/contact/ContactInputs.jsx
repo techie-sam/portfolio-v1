@@ -40,7 +40,7 @@ const ContactInputs = () => {
       return errors
     },
     onSubmit: (values, { setSubmitting, resetForm,  }) => {
-      fetch("http://localhost:5000", {
+      fetch("https://techiesamm.vercel.app", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
