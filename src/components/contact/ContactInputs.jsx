@@ -22,25 +22,31 @@ const ContactInputs = () => {
     initialValues,
     validate: (values) => {
       const errors = {}
+
+      // Check first name Validity
       if (!values.fullName) {
         errors.fullName = "Full Name is required"
       } else if (values.fullName.length > 15) {
         errors.fullName = 'Full Name must be 15 characters or less';
       }
 
+     // Check Email Validity
       if (!values.email) {
         errors.email = 'Email is Required';
       } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
         errors.email = 'Invalid email address';
       }
 
+      // Check Message Validity
       if (!values.message) {
         errors.message = "Message cannot be empty"
       }
       return errors
     },
+
+
     onSubmit: (values, { setSubmitting, resetForm,  }) => {
-      fetch("https://techiesamm.vercel.app", {
+      fetch("https://techiesamm.vercel.app/api/v1", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -101,7 +107,9 @@ const ContactInputs = () => {
             />
           )
         }
-        <button type='submit' className='btn rounded btnPrimary px-5 mt-3' disabled={formik.isSubmitting}>{formik.isSubmitting ? <CircularProgress size={20} color="inherit"/> : "SEND MESSAGE"}</button>
+        <button type='submit' className='btn rounded btnPrimary px-5 mt-3' disabled={formik.isSubmitting}>
+          {formik.isSubmitting ? <CircularProgress size={20} color="inherit"/> : "SEND MESSAGE"}
+        </button>
       </form>
     </>
   )
