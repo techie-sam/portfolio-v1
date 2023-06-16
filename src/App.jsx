@@ -7,7 +7,6 @@ import Skills from './components/skills/Skills';
 import Projects from "./components/projects/Projects";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
-import Reviews from "./components/reviews/Reviews";
 
 const App = () => {
   
