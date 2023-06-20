@@ -25,7 +25,7 @@ const ContactInputs = () => {
       // Check first name Validity
       if (!values.fullName.trim()) {
         errors.fullName = "Full Name is required"
-      } else if (values.fullName.length > 15) {
+      } else if (values.fullName.length < 5 || values.fullName.length > 15) {
         errors.fullName = 'Full Name must be 15 characters or less';
       }
 
@@ -39,7 +39,7 @@ const ContactInputs = () => {
       // Check Message Validity
       if (!values.message.trim()) {
         errors.message = "Message cannot be empty"
-      }else if (values.message.trim().length < 10){
+      } else if (values.message.trim().length < 10) {
         errors.message = "Message should contain at least 10 characters"
       }
       return errors
@@ -56,18 +56,19 @@ const ContactInputs = () => {
       })
 
         .then(response => response.json())
-        .then(data => {
+        .then(res => {
           setSubmitting(false)
           resetForm()
-          toast.success(data.data.response)
+          if (res.status === 'fail') toast.error(res.message)
+          if (res.status === 'success') toast.success(res.data.response)
         })
         .catch(error => {
           setSubmitting(false)
           resetForm()
           toast.error("An error occured")
         });
-      },
-    })
+    },
+  })
 
 
 
@@ -96,7 +97,7 @@ const ContactInputs = () => {
                 }
               }}
 
-              error={formik.touched[name] && formik.errors[name]  ? true : false}
+              error={formik.touched[name] && formik.errors[name] ? true : false}
               helperText={<span className='text-danger'>{formik.touched[name] ? formik.errors[name] : null}</span>}
 
               fullWidth
