@@ -12,7 +12,6 @@ const StyledHeader = styled.header`
   @media screen and (max-width: 500px){
     h1{
       font-size:2em;
-      padding:8px 0 15px 0
     }
     h5{
       font-size:1em
