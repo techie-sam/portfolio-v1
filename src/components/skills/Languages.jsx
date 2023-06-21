@@ -18,7 +18,7 @@ const Languages = () => {
                 {
                     LANGUAGES.map(language => (
                         <div className="col-5 col-md-4 border rounded rounded-3" key={language}>
-                            <p className='mt-2 col'><Verified style={{ fontSize: '1.5em' }} /> {language}</p>
+                            <p className='mt-2 col'><Verified style={{ fontSize: '1.2em' }} /> {language}</p>
                         </div>
                     )
                     )
