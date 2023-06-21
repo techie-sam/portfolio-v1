@@ -1,4 +1,5 @@
 import cv from '../../assets/001Abolade-Samuel-Resume.pdf'
+
 const CTA = () => {
     return (
         <>

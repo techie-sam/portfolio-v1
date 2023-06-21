@@ -9,27 +9,26 @@ import StyledNav from './StyledNav';
 
 
 const Nav = () => {
-    const [activeNav, setActiveNav] = useState("#")
+    const [activeNav, setActiveNav] = useState("#home")
+    const NAV_CONTENT = [
+        { href: "#home", icon: <HomeRoundedIcon className='fs-6' /> },
+        { href: "#about", icon: <PersonIcon className='fs-6' /> },
+        { href: "#skills", icon: <CollectionsBookmarkRoundedIcon className='fs-6' /> },
+        { href: "#projects", icon: <WorkHistoryIcon className='fs-6' /> },
+        { href: "#contact", icon: <SpeakerNotesIcon className='fs-6' /> }
+    ]
 
     return (
         <StyledNav>
 
             <nav>
-                <a href="#home" onClick={() => setActiveNav("#")} className={activeNav === '#' ? 'active' : ""}>
-                    <HomeRoundedIcon className='fs-6' />
-                </a>
-                <a href="#about" onClick={() => setActiveNav('#about')} className={activeNav === "#about" ? "active" : " "}>
-                    <PersonIcon className='fs-6' />
-                </a>
-                <a href="#skills" onClick={() => setActiveNav('#skills')} className={activeNav === "#skills" ? "active" : " "}>
-                    <CollectionsBookmarkRoundedIcon className='fs-6' />
-                </a>
-                <a href="#projects" onClick={() => setActiveNav('#projects')} className={activeNav === "#projects" ? "active" : " "}>
-                    <WorkHistoryIcon className='fs-6' />
-                </a>
-                <a href="#contact" onClick={() => setActiveNav('#contact')} className={activeNav === "#contact" ? "active" : " "}>
-                    <SpeakerNotesIcon className='fs-6' />
-                </a>
+                {
+                    NAV_CONTENT.map(({href, icon}, index) =>
+                        <a key={href} href={href} onClick={() => setActiveNav(href)} className={activeNav === href ? 'active' : null}>
+                            {icon}
+                        </a>
+                    )
+                }
             </nav>
         </StyledNav>
     )
