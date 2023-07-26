@@ -2,12 +2,12 @@ import VerifiedIcon from '@mui/icons-material/Verified';
 import { motion } from 'framer-motion';
 import { cardVariants } from '../../styles/ScrollEffectAnimationVariant';
 const TECHNOLOGIES = [
-    "React JS",
-    "Next JS",
+    "React",
+    "Next",
     "Redux",
-    "Tailwind",
+    "TailwindCSS",
     "Bootstrap",
-    "Node JS",
+    "NodeJS",
 ]
 
 const Technologies = () => {
@@ -21,13 +21,13 @@ const Technologies = () => {
         >
             <h4>Technologies</h4>
             <div>
-                <div className='row justify-content-evenly gap-4 p-2 m-auto text-center'>
+                <div className='row justify-content-evenly gap-4 mt-4 m-auto text-center'>
 
                     {
                         TECHNOLOGIES.map(technology =>
-                            <small style={{ fontSize: '0.9em' }} key={technology} className='col-5 m-auto text-start'>
+                            <div style={{ fontSize: '0.9em' }} key={technology} className='col-5 m-auto text-start'>
                                 <VerifiedIcon style={{ fontSize: '1em' }} /> {technology}
-                            </small>
+                            </div>
                         )
                     }
                 </div>
