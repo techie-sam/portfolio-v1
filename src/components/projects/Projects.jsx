@@ -13,7 +13,7 @@ const Projects = () => {
       name: "Trems Nigeria",
       liveDemo: "https://tremsnigeria.com",
       image: trems,
-      gitHub: "https://quizlet001.netlify.app",
+      gitHub: "#",
       description:
         "A website has significantly boosted TREMS Nigeria brand income through its Search Engine Optimization (SEO), seamless user experience, intuitive navigation which have attracted a significant influx of new clients",
     },
@@ -21,7 +21,7 @@ const Projects = () => {
       name: "Harmony Heaven",
       liveDemo: "https://harmonyheaven.vercel.app",
       image: harmonyheaven,
-      gitHub: "https://github.com/techie-sam/cbt_react_app",
+      gitHub: "https://github.com/techie-sam/quizlet",
       description:
         "A hotel website which entice potential guests and provide them with essential information, as room availability, booking options, and also providing seamless navigation.",
     },
