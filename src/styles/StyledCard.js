@@ -12,6 +12,7 @@ li{
         text-align: center;
         transform: var(--transition);
         min-width:15em;
+        max-width:320px;
         transition: var(--transition)
     }
     @media screen and (max-width: 300px){

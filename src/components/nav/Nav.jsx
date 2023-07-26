@@ -23,7 +23,7 @@ const Nav = () => {
 
             <nav>
                 {
-                    NAV_CONTENT.map(({href, icon}, index) =>
+                    NAV_CONTENT.map(({ href, icon }, index) =>
                         <a key={href} href={href} onClick={() => setActiveNav(href)} className={activeNav === href ? 'active' : null}>
                             {icon}
                         </a>

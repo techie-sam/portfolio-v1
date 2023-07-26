@@ -1,8 +1,9 @@
 import StyledCard from '../../styles/StyledCard';
 import quizlet from '../../assets/quizlet.png';
 import portfolio from '../../assets/react-portfolio.png';
-import vbank from '../../assets/v-bank-clone.png';
+import vbank from '../../assets/V-bank.png';
 import trems from '../../assets/trems-nigeria.png'
+import harmonyheaven from '../../assets/harmony-heaven.jpg'
 import { motion } from 'framer-motion';
 import { textVariants } from '../../styles/ScrollEffectAnimationVariant';
 
@@ -16,8 +17,15 @@ const Projects = () => {
             description: "The website has significantly boosted TREMS Nigeria brand income through its Search Engine Optimization (SEO), seamless user experience, intuitive navigation which have attracted a significant influx of new clients",
         },
         {
-            name: "V-Pay",
-            liveDemo: "https://v-bank001.vercel.app",
+            name: "Harmony Heaven",
+            liveDemo: "https://harmonyheaven.vercel.app",
+            image: harmonyheaven, 
+            gitHub: "https://github.com/techie-sam/cbt_react_app",
+            description: "A test app designed to combats exam malpractice. Create and take tests online with multiple-choice questions, timed tests, and advanced analytics for progress tracking."
+        },
+        {
+            name: "V Bank",
+            liveDemo: "https://vbank.vercel.app/p",
             image: vbank,
             gitHub: "https://github.com/techie-sam/v-bank",
             description: "A functional banking solution which allows users to simulate transactions, manage accounts, and view balances in a secure and reliable environment. The app is built using vanilla JavaScript, HTML, and CSS, and offers a range of basic features.",
@@ -30,11 +38,19 @@ const Projects = () => {
         },
 
         // {
-        //     name: "React Portfolio",
-        //     liveDemo: "#",
-        //     image: portfolio,
-        //     gitHub: "https://github.com/techie-sam/portfoliov1",
-        //     description: "Portfolio site showcasing my skills in building responsive web applications using React, Bootstrap, and Material-UI."
+        //     name: "",
+        //     liveDemo: "",
+        //     image: null,
+        //     gitHub: "",
+        //     description: ""
+
+        // },
+        // {
+        //     name: "",
+        //     liveDemo: "",
+        //     image: null,
+        //     gitHub: "",
+        //     description: ""
 
         // },
     ]
@@ -53,7 +69,7 @@ const Projects = () => {
                                 initial="offscreen"
                                 whileInView="onscreen"
                                 viewport={{ once: true }}
-                                className='col-sm col-12' key={name}>
+                                className='col-sm col-12 ' key={name}>
                                 <div>
                                     <img src={image} className="w-100" alt={name} />
                                     <h4 className='p-3'>{name}</h4>
