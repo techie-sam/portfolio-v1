@@ -1,6 +1,6 @@
 # My Personal Website Portfolio
 
-![My Portfolio](https://techiesam.vercel.app/personal-website-image )
+![My Portfolio](https://techiesam.vercel.app/assets/personal-website-image-5d23d1bd.png)
 
 Welcome to my personal website portfolio! This project showcases my skills, projects, and experiences as a web developer. It was built using Vite and React, providing a fast and efficient development environment.
 
