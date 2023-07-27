@@ -1,6 +1,6 @@
 import StyledCard from "../../styles/StyledCard";
 import quizlet from "../../assets/quizlet.png";
-import portfolio from "../../assets/react-portfolio.png";
+import portfolio from "../../assets/personal-website-image.png";
 import vbank from "../../assets/V-bank.png";
 import trems from "../../assets/trems-nigeria.png";
 import harmonyheaven from "../../assets/harmony-heaven.jpg";
