@@ -3,7 +3,7 @@ import {
   emailAddress,
   whatsappLink,
   twitterAddress,
-} from "../../constants";
+} from "../../contact-links";
 import { motion } from "framer-motion";
 import { textVariants } from "../../styles/ScrollEffectAnimationVariant";
 
