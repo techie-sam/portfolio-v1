@@ -73,9 +73,9 @@ const ContactInputs = () => {
         .then((response) => response.json())
         .then((res) => {
           setSubmitting(false);
-          resetForm();
-          if (res.status === "fail") toast.error(res.message);
-          if (res.status === "success") toast.success(res.data.response);
+          resetForm();    
+          if (res.status === "fail" || "error") toast.error(res.message);
+          if (res.status === "success") toast.success(res.message);
         })
         .catch(() => {
           setSubmitting(false);
