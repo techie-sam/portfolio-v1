@@ -41,6 +41,14 @@ const Projects = () => {
       description:
         "A test app designed to combats exam malpractice. Create and take tests online with multiple-choice questions, timed tests, and advanced analytics for progress tracking.",
     },
+    {
+      name: "Quizlet Quiz App",
+      liveDemo: "https://quizlet001.vercel.app",
+      image: portfolio,
+      gitHub: "https://github.com/techie-sam/cbt_react_app",
+      description:
+        "A test app designed to combats exam malpractice. Create and take tests online with multiple-choice questions, timed tests, and advanced analytics for progress tracking.",
+    },
 
     // {
     //     name: "",
