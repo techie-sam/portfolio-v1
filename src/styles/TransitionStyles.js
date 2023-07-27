@@ -1,6 +1,4 @@
-import { css } from 'styled-components';
-
-// https://reactcommunity.org/react-transition-group/css-transition
+import { css } from "styled-components";
 
 const TransitionStyles = css`
   /* Fade up */

@@ -80,7 +80,9 @@ const Projects = () => {
               <div>
                 <img src={image} className="w-100" alt={name} />
                 <h5 className="p-2">{name}</h5>
-                <div className="text-justify" style={{fontSize: 12}}>{description}</div>
+                <div className="text-justify" style={{ fontSize: 12 }}>
+                  {description}
+                </div>
               </div>
               <div className="mt-2">
                 <a

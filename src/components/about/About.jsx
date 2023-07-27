@@ -1,16 +1,15 @@
-import AboutCards from './AboutCards';
-import AboutText from './AboutText';
-import HeadShot from './HeadShot';
-
+import AboutCards from "./AboutCards";
+import AboutText from "./AboutText";
+import HeadShot from "./HeadShot";
 
 function About() {
   return (
-    <section className="card-container" id='about'>
-      <div className='text-center'>
+    <section className="card-container" id="about">
+      <div className="text-center">
         <h6>Get To Know</h6>
         <h5>About me</h5>
       </div>
-      <div className='container m-auto d-md-flex gap-5 justify-content-evenly'>
+      <div className="container m-auto d-md-flex gap-5 justify-content-evenly">
         <HeadShot />
         <AboutCards />
       </div>
@@ -18,4 +17,4 @@ function About() {
     </section>
   );
 }
-export default About
+export default About;
