@@ -74,8 +74,9 @@ const ContactInputs = () => {
         .then((res) => {
           setSubmitting(false);
           resetForm();    
-          if (res.status === "fail" || "error") toast.error(res.message);
-          if (res.status === "success") toast.success(res.message);
+          console.log(res)
+          if (res.status === "fail" || "error") return toast.error(res.message);
+          toast.success(res.message);
         })
         .catch(() => {
           setSubmitting(false);
