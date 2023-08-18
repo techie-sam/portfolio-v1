@@ -18,6 +18,9 @@ section {
   margin-top: 8rem;
   margin: auto;
   padding: 10px;
+  max-width: 100px;
+  width: 1500px;;
+  /* border: 2px solid red; */
 }
 
 @media screen and (max-width: 300px) {
