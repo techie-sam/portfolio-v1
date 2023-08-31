@@ -1,3 +1,4 @@
+'use client'
 import StyledCard from "../../styles/StyledCard";
 import quizlet from "../../assets/quizlet.png";
 import portfolio from "../../assets/personal-website-image.png";
