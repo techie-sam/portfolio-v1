@@ -8,7 +8,7 @@ li{
         background: var(--color-bg-variant);
         border: 1px solid transparent;
         border-radius: 1rem;
-        padding: 1.5rem;
+        padding: 20px;
         text-align: center;
         transform: var(--transition);
         min-width:15em;
